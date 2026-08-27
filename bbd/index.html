@@ -1,0 +1,4305 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Being Before Doing | A clown workshop with Pedro Fabião</title>
+  <meta name="description" content="A two-day workshop on presence, authenticity and human connection through the art of clowning. Personal work fuelled by play, humour and aliveness." />
+  <link rel="canonical" href="https://lisbonplayground.com/bbd/">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Social sharing. og-image.jpg is a purpose-built 1200x630 card, not a crop
+       of the page: the title set in Cormorant Garamond on the left, the same
+       faded hero asset (pedro-hero-desktop-fade.png) on the right, on the page's
+       own ground and grade. Built so the preview stays legible at the small
+       size WhatsApp and Telegram render it. The composition is centred inside
+       the middle 630px square of the file on purpose: a small link preview is
+       cropped to that square, so title and face have to live there together. Source: tools/og-image-source.html --
+       re-export from there rather than editing the JPEG. The ?v= on the image
+       URL is a cache buster: Facebook, LinkedIn and Twitter key their scrape on
+       the exact image URL, so bump the number whenever the file is
+       re-exported, or the old preview sticks. -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://lisbonplayground.com/bbd/">
+  <meta property="og:site_name" content="Lisbon Playground">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:title" content="Being Before Doing | A clown workshop with Pedro Fabião">
+  <meta property="og:description" content="A two-day workshop on presence, authenticity and human connection through the art of clowning. Personal work fuelled by play, humour and aliveness.">
+  <meta property="og:image" content="https://lisbonplayground.com/bbd/og-image.jpg?v=2">
+  <meta property="og:image:secure_url" content="https://lisbonplayground.com/bbd/og-image.jpg?v=2">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Being Before Doing — a two-day clown workshop with Pedro Fabião, 15–16 October 2026 in Lisbon. Pedro is pictured with half his face in white clown make-up, looking straight at the camera.">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Being Before Doing | A clown workshop with Pedro Fabião">
+  <meta name="twitter:description" content="A two-day workshop on presence, authenticity and human connection through the art of clowning. Personal work fuelled by play, humour and aliveness.">
+  <meta name="twitter:image" content="https://lisbonplayground.com/bbd/og-image.jpg?v=2">
+  <meta name="twitter:image:alt" content="Being Before Doing — a two-day clown workshop with Pedro Fabião, 15–16 October 2026 in Lisbon. Pedro is pictured with half his face in white clown make-up, looking straight at the camera.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #b78d65;
+      --bg-deep: #7d5d3d;
+      --ink: #f9f3ea;
+      --ink-soft: rgba(249, 243, 234, 0.88);
+      --card: rgba(28, 21, 17, 0.26);
+      --card-strong: rgba(24, 18, 14, 0.48);
+      --gold: #e4c76b;
+      --gold-deep: #cfa645;
+      --line: rgba(255,255,255,0.18);
+      --shadow: rgba(22, 14, 10, 0.18);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: 'Inter', sans-serif;
+      background:
+        linear-gradient(135deg, rgba(98, 67, 43, 0.40), rgba(46, 33, 25, 0.30)),
+        linear-gradient(180deg, #b98d63 0%, #8d6b4a 100%);
+      color: var(--ink);
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* Keeps a heading in the document outline without putting it on screen. */
+    .visually-hidden {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      padding: 0;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      clip-path: inset(50%);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* Stage 3 experiment, 2026-08-25: 1280 -> 1150, which is 90% -- the zoom
+       level the narrower page was first noticed at. One line; revert or retune
+       here and nowhere else. The portrait does not scale with this: its width
+       comes from the hero's height, so narrowing the page leaves Pedro the
+       same size and closes the empty band beside the headline instead. */
+    .page {
+      width: min(1150px, calc(100vw - 28px));
+      margin: 0 auto;
+      padding: 26px 0 50px;
+    }
+
+    .shell {
+      position: relative;
+      overflow: hidden;
+      background: rgba(27, 20, 16, 0.18);
+      border: 1px solid rgba(255,255,255,0.12);
+      box-shadow: 0 32px 80px rgba(36, 23, 15, 0.18);
+    }
+
+    .shell::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, rgba(19,14,12,0.82), rgba(19,14,12,0.36) 34%, rgba(19,14,12,0.22) 52%, rgba(19,14,12,0.34) 100%),
+        radial-gradient(circle at 72% 22%, rgba(243,196,135,0.12), transparent 20%),
+        linear-gradient(180deg, rgba(165,129,92,0.22), rgba(78,58,41,0.14));
+      z-index: 0;
+    }
+
+    .shell::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(24,18,14,0.03), rgba(24,18,14,0.12));
+      z-index: 0;
+    }
+
+    .inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 24px 38px 16px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(22, 17, 13, 0.08);
+    }
+
+    .brand {
+      font-size: 0.8rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: rgba(255,255,255,0.9);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #e74c3c;
+      box-shadow: 0 0 0 6px rgba(231,76,60,0.12);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.78);
+    }
+
+    .nav a {
+      opacity: 0.9;
+    }
+
+    .nav .button {
+      padding: 11px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.26);
+      background: rgba(255,255,255,0.03);
+      color: var(--ink);
+    }
+
+    /* Poster hero. The header and the hero share one positioning context, so
+       the picture runs from the very top of the shell, behind the navigation,
+       down to the bottom of the hero. No rounded corner, no gap, no card. */
+    .poster {
+      position: relative;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .poster > header {
+      position: relative;
+      z-index: 2;
+      border-bottom: 0;
+      background: none;
+    }
+
+    /* No min-height. The hero is exactly as tall as its copy, so the picture,
+       which runs to the bottom of the hero, finishes level with the date and
+       location plates instead of hanging below them over empty ground. */
+    .hero {
+      position: static;
+      display: block;
+      padding: 0;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 2;
+      max-width: 820px;
+      padding: 60px 38px 0;
+    }
+
+    .hero-visual {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      /* The source is a 2:3 portrait. With a percentage width, a short window
+         makes this frame wider relative to its height, cover() zooms further
+         in, and the chin is the first thing to go. Tying the width to the
+         height with aspect-ratio keeps the visible slice of the portrait
+         constant at every window size, so one background-position stays
+         correct everywhere. It has widened twice: 5/6 -> 23/25 -> 39/40, each
+         step moving the picture's left edge toward the type and scaling Pedro
+         up with it, ~17% in total. The crop climbed the other way, 58% ->
+         52% -> 47%, because a wider frame at a fixed height means a taller
+         rendered image, and without that the top of the bun goes first.
+         **Check the bun at 1024, 1280 and 1440 before changing either.** */
+      width: auto;
+      max-width: 84%;
+      aspect-ratio: 39 / 40;
+      z-index: 0;
+      overflow: hidden;
+      /* No CSS mask on desktop: the fade lives in the PNG's alpha channel.
+         The narrow layout below still masks, because it uses the plain JPEG. */
+    }
+
+    /* Desktop uses a dedicated asset with the fade baked into its alpha: the
+       exact 4000x4103 crop (39:40) that cover + 50% 47% used to show from the
+       original, so the picture lands on the same pixels. Image and frame share
+       the ratio, so cover has nothing to crop and the position is moot.
+       Ungraded on export -- the filter below is still the page's own grade.
+       Narrow widths keep the original JPEG; see the 980px block. */
+    .hero-visual::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url('pedro-hero-desktop-fade.png') 50% 50% / cover no-repeat;
+      filter: saturate(0.9) contrast(1.06) brightness(0.92);
+    }
+
+    /* The only overlay left on desktop, and it exists for one reason: the type
+       needs a dark enough ground on the left. It is a single two-stop ramp
+       that reaches zero well before the face -- every extra stop is a change
+       of slope, and a change of slope is a faint Mach band. It is not there to
+       hide a transition; the PNG's alpha does that now. */
+    .poster::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background: linear-gradient(100deg, rgba(19,13,10,0.58) 0%, rgba(19,13,10,0) 70%);
+    }
+
+    /* The vertical scrim keeps the nav above and the meta plates below off bare
+       highlights. It only exists at narrow widths now: it is a full-rectangle
+       gradient, and with the desktop mask gone it would paint its own visible
+       rectangle across the part of the frame the PNG leaves transparent. */
+    .hero-visual::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: none;
+    }
+
+    /* The plates used to end mid-column and leave a hole between them and the
+       portrait. They now sit on a full-width baseline with a second item at
+       the far end, so the bottom of the poster reads as one line of
+       information rather than a block that stopped early. */
+    .hero-baseline {
+      position: relative;
+      z-index: 2;
+      margin-top: 30px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 0 38px;
+    }
+
+    .hero-baseline .hero-meta {
+      margin-top: 0;
+    }
+
+    .hero-scroll {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding-bottom: 15px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.74);
+      transition: color 0.2s ease;
+    }
+
+    .hero-scroll__arrow {
+      font-size: 0.95rem;
+      line-height: 1;
+    }
+
+    .hero-scroll:hover {
+      color: var(--gold);
+    }
+
+    .hero-scroll:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 4px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 26px;
+    }
+
+    .meta-item {
+      min-width: 160px;
+      padding: 14px 16px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(18, 13, 10, 0.16);
+      backdrop-filter: blur(2px);
+    }
+
+    .meta-item span {
+      display: block;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.72);
+      margin-bottom: 8px;
+    }
+
+    .meta-item strong {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .eyebrow {
+      margin: 0 0 18px;
+      font-size: 0.74rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.82);
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(5rem, 8.6vw, 10.6rem);
+      line-height: 0.80;
+      letter-spacing: -0.06em;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    h1 .highlight {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    .subtitle {
+      max-width: 640px;
+      margin: 18px 0 0;
+      font-size: clamp(1.15rem, 1.7vw, 2rem);
+      line-height: 1.45;
+      color: var(--ink-soft);
+      font-weight: 500;
+    }
+
+    .subtitle-note {
+      max-width: 640px;
+      margin: 10px 0 0;
+      font-size: clamp(0.95rem, 1.05vw, 1.2rem);
+      line-height: 1.45;
+      font-weight: 700;
+      color: var(--ink);
+    }
+
+    .name {
+      margin-top: 18px;
+      font-size: 0.9rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.8);
+      font-weight: 700;
+    }
+
+    .cta-row {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .button-primary,
+    .button-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 26px;
+      border-radius: 999px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .button-primary {
+      background: var(--gold);
+      color: #1d140e;
+      box-shadow: 0 14px 32px rgba(228,199,107,0.22);
+    }
+
+    .button-secondary {
+      border: 1px solid rgba(255,255,255,0.28);
+      background: rgba(255,255,255,0.04);
+      color: var(--ink);
+    }
+
+    .button-primary:hover,
+    .button-secondary:hover,
+    .nav .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .button-primary:focus-visible,
+    .button-secondary:focus-visible,
+    .nav .button:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 18px;
+      padding: 0 38px 12px;
+    }
+
+    .card {
+      min-height: 180px;
+      padding: 22px 20px 18px;
+      background: rgba(25, 19, 15, 0.22);
+      border: 1px solid rgba(255,255,255,0.10);
+      backdrop-filter: blur(2px);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.7rem;
+      line-height: 1.1;
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .card p {
+      margin: 0;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.88);
+      font-size: 0.96rem;
+    }
+
+    .section {
+      padding: 22px 38px 32px;
+    }
+
+    .section-inner {
+      background: rgba(27, 19, 15, 0.18);
+      border: 1px solid rgba(255,255,255,0.10);
+      padding: 26px 24px 24px;
+      backdrop-filter: blur(2px);
+    }
+
+    /* No frame round this one: it sits straight on the page background and
+       reads as a continuation of what comes before it. Only the inner
+       padding stays, so the heading still lands on the same line as every
+       other section heading. */
+    .section-inner--bare {
+      background: none;
+      border: 0;
+      backdrop-filter: none;
+    }
+
+    .expect-grid {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .expect-card {
+      padding: 20px 18px;
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .expect-card h3 {
+      margin: 0 0 14px;
+      font-size: 1.18rem;
+      line-height: 1.3;
+      color: var(--ink);
+      font-weight: 700;
+    }
+
+    .expect-card ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 8px;
+    }
+
+    .expect-card li {
+      position: relative;
+      padding-left: 14px;
+      color: rgba(255,255,255,0.88);
+      line-height: 1.6;
+    }
+
+    .expect-card li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--gold);
+    }
+
+    .audience-intro {
+      margin: 20px 0 0;
+      max-width: 68ch;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.88);
+    }
+
+    /* Two honest columns rather than one persuasive list: the hairline above
+       separates who the workshop is for from who it is not for right now. */
+    .audience-fit {
+      margin-top: 34px;
+      padding-top: 30px;
+      border-top: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 30px 52px;
+      align-items: start;
+    }
+
+    .audience-fit__label {
+      margin: 0 0 14px;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    .audience-fit__list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 12px;
+    }
+
+    .audience-fit__list li {
+      position: relative;
+      padding-left: 20px;
+      font-size: 1.02rem;
+      line-height: 1.55;
+      color: rgba(255,255,255,0.88);
+    }
+
+    .audience-fit__list li::before {
+      content: "\2022";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--gold);
+    }
+
+    .audience-note {
+      margin: 34px 0 0;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.88);
+    }
+
+    .audience-close {
+      margin: 18px 0 0;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    @media (max-width: 760px) {
+      .audience-fit {
+        grid-template-columns: 1fr;
+        gap: 26px;
+      }
+    }
+
+    /* An interlude, and it has one job. The run from "Is This for You?" into
+       "What can be expected" is about twenty bullet points back to back --
+       the densest listing anywhere on the page -- and the second of those
+       sections opens straight into a three-column grid. A wide photograph and
+       one spoken line is the breath between them.
+
+       It also lands where it is useful rather than merely tidy: the section
+       above closes on "the learning happens through taking part", which is
+       the page asking something of the reader. This answers that, in Pedro's
+       voice, immediately, and before the list of what they get.
+
+       No frame -- .section-inner--bare, like #expectations directly below.
+       A bordered panel here would read as a third section rather than as a
+       pause inside the run. */
+    .interlude {
+      margin: 0;
+    }
+
+    /* Three moments rather than one, but the band stays the shape it was: a
+       wide horizontal run between two tall list blocks is what reads as a
+       breath, and three portrait tiles side by side keep that. Stacking them
+       on any screen would turn the pause into a long scroll, which is why the
+       row holds at three columns all the way down. */
+    .interlude__row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr) minmax(0, 1fr);
+      gap: 12px;
+    }
+
+    /* 4:5 is the ratio the gallery already uses, so the page has one portrait
+       shape and not two. The three sources are 0.56, 0.75 and 1.80, so every
+       tile is cropped -- the per-tile object-position below is where each one
+       is told what to keep. The shared filter is doing real work here: the
+       three were shot in different rooms under different light, and it pulls
+       them close enough to read as one row. */
+    .interlude__photo {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border: 1px solid rgba(255,255,255,0.10);
+      filter: saturate(0.92) contrast(1.05) brightness(0.94);
+    }
+
+    /* Tall source (0.56), so the crop is vertical: centred, the faces sit low
+       under a wall of empty ceiling. Pushing the window down lifts them. */
+    .interlude__photo--1 { object-position: center 55%; }
+
+    /* The centre tile is the one that carries the section -- two people, mid
+       game, the humour visibly happening -- so it runs 1.25x the width of a
+       side tile. It must not be taller for it: the band's whole point is to be
+       a wide horizontal breath between two tall list blocks, and a taller
+       centre would stretch the two sides to match and grow the band by a
+       quarter. So its ratio is the side ratio times that same 1.25 --
+       4/5 x 1.25 = 1/1 -- and the three tiles come out exactly flush.
+       **These two numbers move together.** Change the 1.25fr above and this
+       ratio has to follow, or the row stops being level.
+
+       The wider frame costs height: the crop keeps 75% of the source rather
+       than 94%. object-position stays at 35%, which spends the loss on the
+       floor and leaves both heads their margin -- checked at 1:1 before the
+       ratio was changed. */
+    .interlude__photo--2 {
+      aspect-ratio: 1 / 1;
+      object-position: center 35%;
+    }
+
+    /* The wide one, and the heaviest crop: 4:5 keeps 44% of its width. Centred
+       is right here though -- the frame is faces edge to edge, and the middle
+       is where the clapping hands in the foreground meet the faces behind. */
+    .interlude__photo--3 { object-position: center center; }
+
+    /* 26px read as a caption sitting under the pictures. The quote is not a
+       caption -- it is the pause the whole section exists for -- and the gap
+       above it is what says so. */
+    .interlude__body {
+      margin: 52px 0 0;
+    }
+
+    .interlude__quote {
+      margin: 0;
+      padding-left: 24px;
+      border-left: 1px solid var(--gold);
+    }
+
+    .interlude__quote p {
+      margin: 0;
+      max-width: 44ch;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(1.32rem, 2vw, 1.95rem);
+      line-height: 1.24;
+      color: var(--ink);
+    }
+
+    .interlude__quote em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    /* A sibling of the quote, not a child of it, on purpose: as a descendant
+       it would lose to .interlude__quote p, which is one class plus one
+       element and therefore the more specific selector. As a sibling it needs
+       no override and no !important. */
+    .interlude__cite {
+      margin: 16px 0 0 24px;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.72);
+    }
+
+    @media (max-width: 700px) {
+      /* Three across on a phone is roughly 110px a tile. Small, but these are
+         close-ups of faces and they survive it, and the row still reads as one
+         band. Stacked it would be 1400px of scrolling, which is the opposite
+         of the pause this section exists to be. Only the gap tightens. */
+      .interlude__row {
+        gap: 6px;
+      }
+
+      .interlude__body {
+        margin-top: 46px;
+      }
+    }
+
+    /* Five principles, not five steps: one stable three-column grid. The five
+       items are auto-placed, so row two fills columns 1 and 2 and leaves the
+       third cell empty rather than stretching. No spans anywhere. */
+    .approach-grid {
+      margin-top: 48px;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 34px 32px;
+      align-items: start;
+    }
+
+    .approach-principle .rule {
+      width: 30px;
+      height: 2px;
+      margin-bottom: 16px;
+      background: var(--gold);
+    }
+
+    .approach-principle h3 {
+      margin: 0 0 10px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      line-height: 1.2;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .approach-principle p {
+      margin: 0;
+      color: rgba(255,255,255,0.88);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 980px) {
+      .approach-grid {
+        margin-top: 40px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 30px 28px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .approach-grid {
+        margin-top: 32px;
+        grid-template-columns: 1fr;
+        gap: 26px;
+      }
+    }
+
+    .about-layout {
+      margin-top: 26px;
+      display: grid;
+      grid-template-columns: 1.13fr 0.8fr;
+      gap: 42px;
+      align-items: stretch;
+    }
+
+    .bio-copy p {
+      margin: 0 0 16px;
+      max-width: 62ch;
+      color: rgba(255,255,255,0.88);
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .bio-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    .bio-copy em {
+      color: var(--ink);
+      font-style: italic;
+    }
+
+    .bio-copy strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .about-photo {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* 4:3 sets the natural height; when the text column runs taller the
+       picture grows to meet it and cover() takes more off the empty left
+       side of the frame rather than distorting anything. */
+    .about-photo img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      flex: 1 1 auto;
+      min-height: 0;
+      object-fit: cover;
+      object-position: 60% top;
+      filter: saturate(0.9) contrast(1.06) brightness(0.9);
+    }
+
+    .about-photo figcaption {
+      margin-top: 12px;
+      font-size: 0.78rem;
+      letter-spacing: 0.02em;
+      color: rgba(255,255,255,0.72);
+    }
+
+    .bio-copy .bio-pull {
+      margin: 34px 0 0;
+      max-width: 22ch;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.6rem, 2.6vw, 2.4rem);
+      line-height: 1.18;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .bio-pull span {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    .bio-creds {
+      margin: 30px 0 0;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.10);
+      max-width: 90ch;
+      font-size: 0.86rem;
+      font-style: italic;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.72);
+    }
+
+    /* Practical block -- centred editorial event card.
+       Token mapping (no new colour values):
+       --cream -> var(--ink), --cream-soft -> var(--ink-soft),
+       --cream-faint -> rgba(255,255,255,0.72) (no named token exists),
+       serif font -> 'Cormorant Garamond' (no --font-serif token exists),
+       card frame -> the same values .section-inner already uses,
+       price divider -> var(--line). */
+    .practical-block {
+      padding: 24px 38px 34px;
+    }
+
+    .practical-card {
+      width: min(820px, 100%);
+      margin: 0 auto;
+      padding: 40px 44px 44px;
+      background: rgba(27, 19, 15, 0.18);
+      border: 1px solid rgba(255,255,255,0.10);
+      backdrop-filter: blur(2px);
+      text-align: center;
+    }
+
+    .practical__eyebrow {
+      margin: 0;
+      font-size: 11.5px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.72);
+    }
+
+    .practical__date {
+      margin: 14px 0 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 400;
+      font-size: clamp(38px, 6vw, 62px);
+      line-height: 1.02;
+      letter-spacing: -0.018em;
+      font-variant-numeric: tabular-nums;
+      color: var(--ink);
+    }
+
+    .practical__facts {
+      margin: 26px 0 0;
+      display: grid;
+      gap: 18px;
+    }
+
+    .practical__lead {
+      margin: 0;
+      font-size: 17px;
+      font-weight: 500;
+      line-height: 1.45;
+      font-variant-numeric: tabular-nums;
+      color: var(--ink);
+    }
+
+    /* the separator is decorative: the "" alt text keeps it out of the a11y tree */
+    .practical__where {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: baseline;
+      gap: 2px 12px;
+    }
+
+    .practical__where span:not(:last-child)::after {
+      content: "\00b7" / "";
+      margin-left: 12px;
+      color: rgba(255,255,255,0.72);
+    }
+
+    .practical__support {
+      margin: 5px 0 0;
+      font-size: 14px;
+      line-height: 1.6;
+      color: rgba(255,255,255,0.72);
+    }
+
+    .practical__prices {
+      margin: 30px 0 0;
+      padding-top: 28px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px 56px;
+    }
+
+    .price {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
+    .price__fig {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 400;
+      font-size: clamp(34px, 4.4vw, 48px);
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+      color: var(--gold);
+    }
+
+    .price__when {
+      font-size: 14px;
+      color: var(--ink-soft);
+    }
+
+    .price--later .price__fig {
+      color: var(--ink-soft);
+    }
+
+    .practical__fine {
+      margin: 26px auto 0;
+      max-width: 46ch;
+      font-size: 14px;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.72);
+    }
+
+    .practical-actions {
+      margin-top: 22px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    @media (max-width: 760px) {
+      .practical-card {
+        padding: 32px 26px 34px;
+      }
+
+      .practical__prices {
+        gap: 20px 40px;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .practical-card {
+        padding: 28px 20px 30px;
+      }
+
+      .practical__prices {
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+      }
+
+      .practical-actions {
+        flex-direction: column;
+      }
+
+      .practical-actions .button-primary,
+      .practical-actions .button-secondary {
+        width: 100%;
+      }
+    }
+
+    .faq {
+      width: min(1080px, 100%);
+      margin: 38px auto 0;
+    }
+
+    .faq h3 {
+      margin: 0 0 10px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.7rem, 2.2vw, 2.3rem);
+      line-height: 1.1;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    /* Two independent columns, not a grid of rows: opening an item in one
+       column cannot move anything in the other. */
+    .faq-columns {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0 46px;
+      align-items: start;
+    }
+
+    .faq-col {
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .faq details {
+      border-top: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .faq summary {
+      position: relative;
+      list-style: none;
+      cursor: pointer;
+      padding: 13px 32px 13px 0;
+      font-size: 0.97rem;
+      line-height: 1.4;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .faq summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq summary::after {
+      content: "+";
+      position: absolute;
+      right: 4px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.1rem;
+      font-weight: 400;
+      line-height: 1;
+      color: var(--gold);
+    }
+
+    .faq details[open] summary::after {
+      content: "\2212";
+    }
+
+    .faq summary:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 2px;
+    }
+
+    .faq-answer {
+      margin: 0 0 16px;
+      padding-right: 32px;
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.88);
+    }
+
+    @media (max-width: 860px) {
+      .faq-columns {
+        grid-template-columns: 1fr;
+      }
+
+      .faq-col:not(:last-child) {
+        border-bottom: 0;
+      }
+    }
+
+    /* Video testimonials: a horizontal snap slider of vertical cards.
+       Poster, play button, name, quote and duration are all separate elements --
+       nothing is baked into the image, and every string stays editable HTML. */
+    .vt-slider {
+      position: relative;
+      margin-top: 26px;
+    }
+
+    /* A flex track, not a grid: grid-auto-columns: minmax(0, N) let the eight
+       columns shrink until they all fitted the viewport, which is exactly the
+       bug. flex: 0 0 <width> on the card makes the track overflow instead. */
+    .vt-track {
+      display: flex;
+      gap: 18px;
+      overflow-x: auto;
+      overscroll-behavior-x: contain;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      padding-right: 8px;
+      padding-bottom: 2px;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    /* Scrollbar hidden, scrolling itself untouched. */
+    .vt-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Trailing spacer. A pseudo-element is a flex item here, so it scrolls with
+       the track, but it is not in the DOM, not in the accessibility tree, not
+       focusable, and cannot affect participant order. It keeps the row from
+       ending flush against the frame at widths where the cards divide evenly.
+       scroll-snap-align: end makes the far end a valid rest position, which
+       mandatory snapping would otherwise fight. */
+    .vt-track::after {
+      content: "";
+      flex: 0 0 48px;
+      scroll-snap-align: end;
+    }
+
+    .vt-track:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 4px;
+    }
+
+    .vt-card {
+      flex: 0 0 210px;
+      width: 210px;
+      min-width: 210px;
+      scroll-snap-align: start;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 0;
+      background: none;
+      border: 0;
+      text-align: left;
+      cursor: pointer;
+      color: inherit;
+      font: inherit;
+    }
+
+    .vt-poster {
+      position: relative;
+      display: block;
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.10);
+      overflow: hidden;
+      transition: border-color 0.2s ease;
+    }
+
+    /* The files are 600x1067, i.e. the same 9:16 the frame declares, so cover
+       has nothing to crop and nothing is stretched. */
+    .vt-poster img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .vt-play {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 46px;
+      height: 46px;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: rgba(19, 14, 11, 0.55);
+      border: 1px solid rgba(255,255,255,0.55);
+      backdrop-filter: blur(2px);
+      transition: background 0.2s ease;
+    }
+
+    .vt-play::after {
+      content: "";
+      position: absolute;
+      left: 54%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-style: solid;
+      border-width: 7px 0 7px 12px;
+      border-color: transparent transparent transparent var(--ink);
+    }
+
+    .vt-card:hover .vt-poster,
+    .vt-card:focus-visible .vt-poster {
+      border-color: var(--gold-deep);
+    }
+
+    .vt-card:hover .vt-play {
+      background: rgba(19, 14, 11, 0.75);
+    }
+
+    .vt-card:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 4px;
+    }
+
+    .vt-duration {
+      position: absolute;
+      right: 8px;
+      bottom: 8px;
+      padding: 2px 7px;
+      background: rgba(19, 14, 11, 0.7);
+      font-size: 0.68rem;
+      letter-spacing: 0.06em;
+      font-variant-numeric: tabular-nums;
+      color: var(--ink);
+    }
+
+    .vt-name {
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .vt-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.12rem;
+      line-height: 1.32;
+      font-style: italic;
+      color: rgba(255,255,255,0.86);
+    }
+
+    .vt-nav {
+      display: flex;
+      justify-content: flex-end;
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .vt-arrow {
+      width: 38px;
+      height: 38px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 50%;
+      color: var(--ink);
+      font-size: 1.2rem;
+      line-height: 1;
+      cursor: pointer;
+      transition: border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .vt-arrow:hover:not(:disabled) {
+      border-color: var(--gold-deep);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .vt-arrow:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 2px;
+    }
+
+    .vt-arrow:disabled {
+      opacity: 0.32;
+      cursor: default;
+    }
+
+    .vt-modal {
+      width: min(420px, calc(100vw - 32px));
+      max-height: calc(100vh - 32px);
+      padding: 0;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: #17110d;
+      color: var(--ink);
+      overflow: visible;
+    }
+
+    .vt-modal::backdrop {
+      background: rgba(12, 8, 6, 0.78);
+    }
+
+    .vt-modal-inner {
+      margin: 0;
+    }
+
+    .vt-video {
+      display: block;
+      width: 100%;
+      max-height: calc(100vh - 96px);
+      aspect-ratio: 9 / 16;
+      background: #000;
+    }
+
+    .vt-caption {
+      padding: 12px 16px 14px;
+      font-size: 0.8rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .vt-close {
+      position: absolute;
+      right: 0;
+      top: -42px;
+      width: 34px;
+      height: 34px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.28);
+      border-radius: 50%;
+      color: var(--ink);
+      font-size: 1.2rem;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .vt-close:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 2px;
+    }
+
+    /* Standard desktop / laptop */
+    @media (max-width: 1200px) {
+      .vt-card {
+        flex-basis: 204px;
+        width: 204px;
+        min-width: 204px;
+      }
+    }
+
+    /* Tablet */
+    @media (max-width: 900px) {
+      .vt-card {
+        flex-basis: clamp(200px, 34vw, 230px);
+        width: clamp(200px, 34vw, 230px);
+        min-width: clamp(200px, 34vw, 230px);
+      }
+
+      .vt-track::after {
+        flex-basis: 20px;
+      }
+    }
+
+    /* Mobile: one card plus a clear slice of the next */
+    @media (max-width: 600px) {
+      .vt-card {
+        flex-basis: 64vw;
+        width: 64vw;
+        min-width: 64vw;
+      }
+
+      .vt-track::after {
+        flex-basis: 8px;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .vt-track {
+        gap: 14px;
+      }
+
+      .vt-close {
+        top: 6px;
+        right: 6px;
+        background: rgba(19, 14, 11, 0.72);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .vt-track {
+        scroll-behavior: auto;
+      }
+    }
+
+    /* Three compact cards; the long text lives in a modal, not in the page.
+       Grid capped at 1060px so a card lands near 320px and the square portrait
+       fills it edge to edge instead of leaving a gap beside it. */
+    .stories {
+      max-width: 1060px;
+      margin: 30px auto 0;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 48px clamp(48px, 5vw, 80px);
+    }
+
+    .story-card {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* A circle, not a card: the portrait identifies the person, the text does
+       the talking. Both axes are set outright rather than left to
+       aspect-ratio -- the width/height attributes on <img> are presentational
+       hints, and with height unset the file's own height wins. */
+    .story-card__frame {
+      width: 96px;
+      height: 96px;
+      flex: 0 0 auto;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+
+    .story-card__portrait {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: 0;
+      /* Three photographs from three rooms. This narrows the gap between them
+         and must stay this gentle -- it has to read as colour, not sepia. */
+      filter: saturate(0.78) contrast(0.96) brightness(0.98) sepia(0.08);
+    }
+
+    /* cover crops only the overflowing axis: Alex is already square, Sasha
+       loses width, Daria loses height. Both values were re-tuned for the
+       circle, which is a tighter frame than the old square.
+
+       Sasha and Daria also stand further back in their photographs than Alex
+       does in his, so their heads came out smaller in the same circle. The
+       scale closes that; the translate re-centres the head afterwards, since
+       scale() zooms about the middle of the frame and so exaggerates anything
+       that was off-centre to begin with. Sasha's photograph is the widest of
+       the three, which is why she needs the most of both.
+
+       Both translations stay inside the overflow the scale creates: at 1.44
+       Sasha has 22% of travel and uses 18%, at 1.3 Daria has 15% and uses 5%.
+       **Keep that margin if either is retuned** -- past it the frame edge
+       shows as a bare crescent. The percentages are relative to the frame, so
+       84px on mobile behaves identically.
+
+       The transform is on the card only. The modal script copies
+       object-position and nothing else, which is why those two values are
+       left alone: the modal portrait is unaffected. */
+    .story-card--sasha .story-card__portrait {
+      object-position: 44% 24%;
+      transform: translate(18%, 14%) scale(1.44);
+    }
+
+    .story-card--daria .story-card__portrait {
+      object-position: 54% 16%;
+      transform: translate(-5%, -2%) scale(1.3);
+    }
+
+    /* Portrait, name and role on one line. Name and role stay separate
+       elements -- the <h3> keeps its heading semantics and the modal script
+       keeps reading .story-name / .story-role. */
+    .story-person {
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .story-person__meta {
+      min-width: 0;
+    }
+
+    .story-name {
+      margin: 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      line-height: 1.1;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .story-role {
+      margin: 3px 0 0;
+      font-size: 0.78rem;
+      line-height: 1.25;
+      color: rgba(255,255,255,0.72);
+    }
+
+    .story-theme {
+      margin: 26px 0 10px;
+      font-size: 0.66rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+    }
+
+    .story-quote {
+      margin: 0 0 20px;
+      padding-left: 14px;
+      border-left: 1px solid var(--gold-deep);
+    }
+
+    .story-quote p {
+      margin: 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.22rem;
+      line-height: 1.35;
+      color: var(--gold);
+    }
+
+    .story-preview {
+      margin: 0 0 24px;
+      font-size: 0.94rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.88);
+    }
+
+    /* margin-top:auto lines the three controls up on one baseline even when
+       the cards above them differ in height. */
+    .story-open {
+      align-self: flex-start;
+      margin-top: auto;
+      padding: 0;
+      background: none;
+      border: 0;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: inherit;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .story-open:hover {
+      color: var(--ink);
+    }
+
+    .story-open:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 4px;
+    }
+
+    .story-modal {
+      position: fixed;
+      width: min(760px, calc(100vw - 32px));
+      max-height: calc(100vh - 48px);
+      padding: 0;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: #17110d;
+      color: var(--ink);
+    }
+
+    .story-modal::backdrop {
+      background: rgba(12, 8, 6, 0.8);
+    }
+
+    .story-modal__inner {
+      max-height: calc(100vh - 48px);
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      margin: 0;
+      padding: 36px 40px 42px;
+      text-align: center;
+    }
+
+    .story-modal__portrait {
+      width: 132px;
+      height: 132px;
+      margin: 0 auto;
+      object-fit: cover;
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+
+    .story-modal__theme {
+      margin: 18px 0 0;
+      font-size: 0.66rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.55);
+    }
+
+    .story-modal__name {
+      margin: 8px 0 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 3vw, 2.3rem);
+      line-height: 1.1;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .story-modal__role {
+      margin: 3px 0 0;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.72);
+    }
+
+    .story-modal__quote {
+      margin: 22px auto 0;
+      max-width: 46ch;
+    }
+
+    .story-modal__quote p {
+      margin: 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(1.15rem, 1.8vw, 1.4rem);
+      line-height: 1.4;
+      color: var(--gold);
+    }
+
+    .story-modal__text {
+      margin: 26px auto 0;
+      padding-top: 24px;
+      max-width: 66ch;
+      border-top: 1px solid var(--line);
+      text-align: left;
+    }
+
+    .story-modal__text p {
+      margin: 0 0 16px;
+      font-size: 1rem;
+      line-height: 1.85;
+      color: rgba(255,255,255,0.88);
+    }
+
+    .story-modal__text p:last-child {
+      margin-bottom: 0;
+    }
+
+    .story-modal__text .story-standfirst strong {
+      color: var(--ink);
+      font-weight: 600;
+    }
+
+    .story-modal__close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      z-index: 2;
+      width: 34px;
+      height: 34px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(19, 14, 11, 0.72);
+      border: 1px solid rgba(255,255,255,0.24);
+      border-radius: 50%;
+      color: var(--ink);
+      font-size: 1.2rem;
+      line-height: 1;
+      cursor: pointer;
+    }
+
+    .story-modal__close:hover {
+      border-color: var(--gold-deep);
+      color: var(--gold);
+    }
+
+    .story-modal__close:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 2px;
+    }
+
+    /* Tablet: two columns, the third card drops below. Three would be 231px
+       wide here, which is not readable. */
+    @media (max-width: 900px) {
+      .stories {
+        max-width: 720px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .stories {
+        max-width: 400px;
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .story-modal__inner {
+        padding: 30px 20px 34px;
+      }
+    }
+    /* The gallery is the only full-bleed band on the page: no .section-inner,
+       no frame, no background. Between two panelled sections the photographs
+       themselves are the panel, and the run carries off the right edge of the
+       shell instead of stopping inside a box. --gal-edge is the one measure
+       that keeps the heading, the first card and every snap position on the
+       same left margin as the headings in the sections above and below. */
+    .section--bleed {
+      padding-left: 0;
+      padding-right: 0;
+      padding-top: 34px;
+      padding-bottom: 40px;
+      --gal-edge: 62px;              /* .section 38px + .section-inner 24px */
+    }
+
+    .gallery-head {
+      padding-left: var(--gal-edge);
+      padding-right: var(--gal-edge);
+    }
+
+    @media (max-width: 640px) {
+      .section--bleed {
+        padding-top: 28px;
+        padding-bottom: 32px;
+        --gal-edge: 42px;            /* .section 18px + .section-inner 24px */
+      }
+    }
+
+    /* A contact sheet laid on its side: one horizontal run of equal frames.
+       Every card keeps the same size and the same weight -- no hero, no
+       featured tile -- but the section costs one card of height instead of
+       five rows, which is what buys room for thirty-odd photographs.
+       The card is a crop; the lightbox shows the photograph whole. */
+    .gallery {
+      position: relative;
+      margin-top: 18px;
+      --gal-gap: 12px;
+      /* 3.4 across: three whole cards and a .4 peek that says "this scrolls".
+         Written out per breakpoint rather than divided by a custom property,
+         because calc() division by var() is not safe everywhere. */
+      --gal-item: calc((100% - 2.4 * var(--gal-gap)) / 3.4);
+    }
+
+    /* The hint under the heading. Two strings, one per input model; the one
+       that does not apply is display:none, which also keeps it out of the
+       accessibility tree rather than having it announced twice. */
+    .gallery-instruction {
+      margin: 8px 0 0;
+      font-size: 0.78rem;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.56);
+    }
+
+    .gallery-instruction__touch {
+      display: none;
+    }
+
+    /* hover:none is the accurate test; the width clause covers phones whose
+       browser reports a hover-capable pointer. Between 700 and 900px a mouse
+       user still reads "drag", which is what they can actually do. */
+    @media (hover: none), (max-width: 700px) {
+      .gallery-instruction__pointer { display: none; }
+      .gallery-instruction__touch { display: inline; }
+    }
+
+    /* Leading gutter only. The trailing edge is flush, so the peeking card is
+       cut by the edge of the shell rather than sitting inside a margin --
+       which is the whole difference between a bleed and a boxed row.
+       scroll-padding keeps every snapped card on the --gal-edge line. */
+    .gallery-track {
+      display: flex;
+      gap: var(--gal-gap);
+      padding-left: var(--gal-edge);
+      scroll-padding-left: var(--gal-edge);
+      overflow-x: auto;
+      overscroll-behavior-x: contain;
+      scroll-snap-type: x proximity;
+      scroll-behavior: smooth;
+      padding-bottom: 2px;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      -webkit-overflow-scrolling: touch;
+      cursor: grab;
+    }
+
+    /* Mouse drag only. Snapping is suspended for the duration, otherwise the
+       track fights the pointer on every frame. */
+    .gallery-track.is-dragging {
+      cursor: grabbing;
+      scroll-behavior: auto;
+      scroll-snap-type: none;
+      user-select: none;
+    }
+
+    /* Scrollbar hidden, scrolling itself untouched. */
+    .gallery-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* A real <button>, so the lightbox opens on click, Enter and Space alike
+       and every frame carries its own accessible name from the alt text. */
+    .gallery-item {
+      flex: 0 0 var(--gal-item);
+      margin: 0;
+      padding: 0;
+      aspect-ratio: 4 / 5;
+      scroll-snap-align: start;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.03);
+      display: block;
+      cursor: inherit;                /* the track owns the cursor: grab */
+      font: inherit;
+      color: inherit;
+      transition: border-color 0.18s ease, transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .gallery-item img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      background: #1d140e;
+      transition: transform 180ms ease, filter 180ms ease;
+    }
+
+    /* Lift the card, brighten the picture: enough to read as "this opens",
+       not enough to make the row restless as the pointer crosses it. */
+    .gallery-item:hover {
+      border-color: var(--gold-deep);
+      transform: translateY(-3px);
+      box-shadow: 0 14px 30px rgba(18, 12, 9, 0.28);
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.025);
+      filter: brightness(1.06);
+    }
+
+    .gallery-item:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+    }
+
+    /* Overlay arrows rather than a row beneath: the point of the slider is to
+       give the section its vertical space back, so the controls cost none. */
+    .gallery-arrow {
+      position: absolute;
+      top: 50%;
+      z-index: 2;
+      width: 42px;
+      height: 42px;
+      transform: translateY(-50%);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(19, 14, 11, 0.72);
+      border: 1px solid rgba(255,255,255,0.28);
+      border-radius: 50%;
+      backdrop-filter: blur(2px);
+      color: var(--ink);
+      font-size: 1.5rem;
+      line-height: 1;
+      cursor: pointer;
+      transition: opacity 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .gallery-arrow--prev { left: 14px; }
+    .gallery-arrow--next { right: 14px; }
+
+    .gallery-arrow:hover:not(:disabled) {
+      border-color: var(--gold-deep);
+      background: rgba(19, 14, 11, 0.88);
+    }
+
+    .gallery-arrow:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 2px;
+    }
+
+    /* Hidden rather than dimmed at the ends -- a disabled circle floating over
+       a photograph reads as an error state. */
+    .gallery-arrow:disabled {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Touch widths: the swipe is the navigation, so the arrows go away. */
+    @media (max-width: 900px) {
+      .gallery-arrow { display: none; }
+    }
+
+    @media (max-width: 1100px) {
+      .gallery { --gal-item: calc((100% - 1.8 * var(--gal-gap)) / 2.8); }
+    }
+
+    @media (max-width: 860px) {
+      .gallery { --gal-item: calc((100% - 1.2 * var(--gal-gap)) / 2.2); }
+    }
+
+    @media (max-width: 560px) {
+      .gallery {
+        --gal-gap: 8px;
+        --gal-item: calc((100% - 0.35 * var(--gal-gap)) / 1.35);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .gallery-track { scroll-behavior: auto; }
+      .gallery-item,
+      .gallery-item img { transition: none; }
+      .gallery-item:hover { transform: none; }
+      .gallery-item:hover img { transform: none; }
+    }
+
+    /* Lightbox: the photograph at its own proportions, on nothing.
+       The <dialog> fills the viewport and is transparent, so the backdrop
+       click test (event.target === dialog) works anywhere around the frame. */
+    .lightbox {
+      width: 100vw;
+      max-width: 100vw;
+      height: 100vh;
+      height: 100dvh;
+      max-height: 100vh;
+      max-height: 100dvh;
+      margin: 0;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      color: var(--ink);
+      overflow: hidden;
+    }
+
+    .lightbox::backdrop {
+      background: rgba(10, 7, 5, 0.92);
+    }
+
+    .lightbox__frame {
+      margin: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      padding: 56px 76px 48px;
+      pointer-events: none;         /* clicks fall through to the dialog */
+    }
+
+    /* min-height:0 lets the flex item shrink, which is what keeps a tall
+       portrait inside the viewport instead of pushing the caption off it. */
+    .lightbox__img {
+      min-height: 0;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      pointer-events: auto;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.5);
+    }
+
+    .lightbox__caption {
+      flex: 0 0 auto;
+      max-width: 62ch;
+      margin: 0;
+      text-align: center;
+      font-size: 0.86rem;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.72);
+      pointer-events: auto;
+    }
+
+    .lightbox__close,
+    .lightbox__step {
+      position: absolute;
+      z-index: 2;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.28);
+      border-radius: 50%;
+      color: var(--ink);
+      line-height: 1;
+      cursor: pointer;
+      transition: border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .lightbox__close {
+      top: 16px;
+      right: 16px;
+      width: 42px;
+      height: 42px;
+      font-size: 1.4rem;
+    }
+
+    .lightbox__step {
+      top: 50%;
+      width: 52px;
+      height: 52px;
+      transform: translateY(-50%);
+      font-size: 1.8rem;
+    }
+
+    .lightbox__step--prev { left: 16px; }
+    .lightbox__step--next { right: 16px; }
+
+    .lightbox__close:hover,
+    .lightbox__step:hover {
+      border-color: var(--gold-deep);
+      background: rgba(255,255,255,0.12);
+    }
+
+    .lightbox__close:focus-visible,
+    .lightbox__step:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 2px;
+    }
+
+    @media (max-width: 700px) {
+      .lightbox__frame {
+        padding: 62px 12px 76px;
+      }
+
+      /* Below the picture on a phone, where the thumbs are, rather than over it. */
+      .lightbox__step {
+        top: auto;
+        bottom: 14px;
+        transform: none;
+        width: 46px;
+        height: 46px;
+      }
+
+      .lightbox__step--prev { left: 24px; }
+      .lightbox__step--next { right: 24px; }
+
+      .lightbox__caption {
+        font-size: 0.8rem;
+      }
+    }
+
+
+    /* The film hangs in the open, not in a frame. This section drops
+       .section-inner altogether, so the only border left in it is the
+       hairline round the video. The 62px matches the gallery's --gal-edge
+       (.section 38 + .section-inner 24), which is where every other section
+       heading sits -- so the kicker and the left edge of the video land on
+       that same line. */
+    /* Open, but not adrift. The rest of the page runs on a 54px gap between
+       panels; this section lands near 88px above the video and 80px below,
+       which is more only because its neighbours have borders to separate
+       them and this one has none. There is no label above the video, so
+       .bali-feature carries no top margin either. */
+    .section--open {
+      padding: clamp(32px, 4vw, 56px) 62px;
+    }
+
+    .bali-feature {
+      display: grid;
+      grid-template-columns: minmax(0, 1.65fr) minmax(280px, 0.85fr);
+      gap: clamp(36px, 5vw, 72px);
+      align-items: center;
+    }
+
+    .bali-video-wrap {
+      position: relative;
+      aspect-ratio: 16 / 9;
+      min-width: 0;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: #1d140e;
+    }
+
+    .bali-video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Sits above the poster only. Hidden as soon as playback starts, however it
+       was started, so the native controls are never fighting it. */
+    .bali-play {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 74px;
+      height: 74px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(19, 14, 11, 0.55);
+      border: 1px solid rgba(255,255,255,0.55);
+      backdrop-filter: blur(2px);
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    .bali-play:hover {
+      background: rgba(19, 14, 11, 0.75);
+    }
+
+    .bali-play:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 4px;
+    }
+
+    .bali-play[hidden] {
+      display: none;
+    }
+
+    .bali-play__icon {
+      margin-left: 5px;
+      border-style: solid;
+      border-width: 11px 0 11px 19px;
+      border-color: transparent transparent transparent var(--ink);
+    }
+
+    /* No padding and no panel: the grid centres this column against the
+       video, and the whitespace round it is the section's own. */
+    .bali-copy {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 28px;
+    }
+
+    /* Pedro's own words beside the film, not a caption about it. No quote
+       marks and no attribution: the section is his, and the two voices --
+       gold then cream -- are what separates the lines, not punctuation. */
+    .bali-quote {
+      margin: 0;
+      padding-left: 24px;
+      border-left: 1px solid var(--gold);
+    }
+
+    /* The quieter line gets the quieter rule as well as the quieter ink. */
+    .bali-quote--soft {
+      border-left-color: var(--gold-deep);
+    }
+
+    .bali-quote p {
+      margin: 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(1.45rem, 2.1vw, 2.1rem);
+      line-height: 1.12;
+      color: var(--gold);
+    }
+
+    .bali-quote--soft p {
+      color: var(--ink-soft);
+    }
+
+    .section-kicker {
+      margin: 0 0 8px;
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.72);
+    }
+
+    .section h2 {
+      margin: 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.7rem, 3vw, 4.4rem);
+      line-height: 0.9;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .section-copy {
+      margin: 16px 0 0;
+      max-width: 820px;
+      font-size: 1.08rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.88);
+    }
+
+    /* Closing invitation + sticky booking button.
+       --cream -> var(--ink), --cream-soft -> var(--ink-soft),
+       --cream-faint -> rgba(255,255,255,0.72) (no named token exists),
+       --font-serif -> 'Cormorant Garamond' (no font token exists),
+       --brown-deep -> inherited from .button-primary, which already sets it,
+       the hairline -> var(--line). No new colour values. */
+    .closing {
+      /* 26 + the 34px bottom padding of .practical-block above = 60px effective
+         22 + the 50px bottom padding of .page below            = 72px effective */
+      margin: 0 38px;
+      padding: 26px 0 22px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 8px;
+    }
+
+    .closing__line {
+      margin: 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(1.22rem, 1.7vw, 1.38rem);
+      line-height: 1.35;
+      color: var(--gold);
+    }
+
+    .closing__ask {
+      margin: 0;
+      font-size: 0.92rem;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.72);
+    }
+
+    .closing__link {
+      border-bottom: 1px solid var(--gold-deep);
+      padding-bottom: 1px;
+      color: var(--ink);
+    }
+
+    .closing__link:hover {
+      color: var(--gold);
+    }
+
+    .closing__link:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 3px;
+      border-bottom-color: transparent;
+    }
+
+    /* Contact row: one quiet line inside the same <footer>, under a hairline.
+       Muted cream by default; the gold appears only on hover and focus. */
+    .contacts {
+      width: 100%;
+      margin-top: 22px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 12px 30px;
+      font-size: 0.82rem;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.72);
+    }
+
+    .contacts__brand {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-style: italic;
+      color: rgba(255,255,255,0.82);
+    }
+
+    .contacts__social {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .contacts__label {
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-size: 0.68rem;
+    }
+
+    .contacts__icon {
+      display: inline-flex;
+      color: inherit;
+      transition: color 0.2s ease;
+    }
+
+    .contacts__icon svg {
+      display: block;
+    }
+
+    .contacts__link {
+      color: inherit;
+      border-bottom: 1px solid rgba(255,255,255,0.18);
+      padding-bottom: 1px;
+      transition: color 0.2s ease, border-color 0.2s ease;
+    }
+
+    .contacts__phone {
+      font-variant-numeric: tabular-nums;
+    }
+
+    .contacts__icon:hover,
+    .contacts__link:hover {
+      color: var(--gold);
+    }
+
+    .contacts__link:hover {
+      border-bottom-color: var(--gold-deep);
+    }
+
+    .contacts__icon:focus-visible,
+    .contacts__link:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: 4px;
+      border-bottom-color: transparent;
+      color: var(--gold);
+    }
+
+    @media (max-width: 700px) {
+      .closing {
+        margin: 0 18px;
+        gap: 10px;
+      }
+
+      .closing__link {
+        display: inline-block;
+        padding: 6px 0;
+      }
+
+      .contacts {
+        gap: 14px 22px;
+      }
+
+      .contacts__icon,
+      .contacts__link {
+        padding-top: 4px;
+        padding-bottom: 4px;
+      }
+    }
+
+    /* Positioning and reveal only -- the look comes from .button-primary. */
+    .sticky-cta {
+      position: fixed;
+      right: 28px;
+      bottom: calc(28px + env(safe-area-inset-bottom, 0px));
+      z-index: 60;
+
+      opacity: 0;
+      visibility: hidden;              /* keeps it out of the tab order while hidden */
+      transform: translateY(12px);
+      transition: opacity 220ms ease, transform 220ms ease, visibility 220ms;
+    }
+
+    .sticky-cta.is-visible {
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+    }
+
+    .sticky-cta:hover {
+      transform: none;
+    }
+
+    .sticky-cta:focus-visible {
+      outline: 2px solid var(--ink);
+      outline-offset: 3px;
+    }
+
+    @media (max-width: 600px) {
+      .sticky-cta {
+        right: 50%;
+        transform: translate(50%, 12px);
+      }
+
+      .sticky-cta.is-visible,
+      .sticky-cta:hover {
+        transform: translate(50%, 0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .sticky-cta {
+        transition: opacity 120ms ease, visibility 120ms;
+        transform: none;
+      }
+
+      .sticky-cta.is-visible,
+      .sticky-cta:hover {
+        transform: none;
+      }
+
+      @media (max-width: 600px) {
+        .sticky-cta,
+        .sticky-cta.is-visible,
+        .sticky-cta:hover {
+          transform: translateX(50%);
+        }
+      }
+    }
+
+    .why-workshop {
+      padding: 44px 38px 40px;
+    }
+
+    .why-workshop-content {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .why-workshop h2 {
+      margin: 10px 0 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 4vw, 3.6rem);
+      line-height: 1.06;
+      letter-spacing: -0.01em;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .why-workshop-columns {
+      margin-top: 32px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px 48px;
+    }
+
+    .why-workshop-columns p {
+      margin: 0;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.88);
+    }
+
+    .why-workshop-closing {
+      margin: 26px 0 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 2.2vw, 2.25rem);
+      line-height: 1.25;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--gold);
+      text-align: left;
+    }
+
+    .about-inner {
+      padding-top: 34px;
+      padding-bottom: 34px;
+    }
+
+    .about-lede {
+      margin: 24px 0 0;
+      max-width: 62ch;
+      font-size: 1.18rem;
+      line-height: 1.6;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .about-body {
+      margin: 16px 0 0;
+      max-width: 66ch;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.88);
+    }
+
+    .workshop-list {
+      margin: 24px 0 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px 18px;
+    }
+
+    .workshop-list li {
+      position: relative;
+      padding: 12px 14px 12px 30px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.025);
+      font-size: 1rem;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.88);
+    }
+
+    .workshop-list li::before {
+      content: "\2022";
+      position: absolute;
+      left: 13px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--gold);
+    }
+
+    /* Copy left, one tall portrait right -- the mockup's composition. The
+       picture is no longer a full-width band with a panel hanging off it; it
+       is a column of its own, and the statement sits over its lower edge on a
+       gradient rather than on a solid card. */
+    .about-split {
+      margin: 26px 0 0;
+      display: grid;
+      grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+      gap: 44px;
+      align-items: start;
+    }
+
+    /* Half a section is already a reading measure; the ch caps would only
+       narrow it further and leave the column ragged against the picture. */
+    .about-split .about-lede,
+    .about-split .about-body {
+      max-width: none;
+    }
+
+    /* One column here, not two: the left half is around 480px, and two boxes
+       across it would leave four words to a line. */
+    .about-split .workshop-list {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .about-portrait {
+      position: relative;
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+
+    /* height: auto is load-bearing, not tidiness. The width and height
+       attributes on the <img> are presentational hints that set a used height,
+       and a non-auto height makes the browser ignore aspect-ratio outright --
+       measured: the frame rendered 2133px tall, the file's own height, until
+       this line was added. The source is 3:4, so a 4:5 frame crops almost
+       nothing and both raised hands stay in. */
+    .about-portrait img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center 22%;
+      filter: saturate(0.92) contrast(1.05) brightness(0.94);
+    }
+
+    .about-portrait figcaption {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 60px 26px 24px;
+      background: linear-gradient(180deg, rgba(19,13,10,0), rgba(19,13,10,0.88) 58%);
+    }
+
+    /* Has to sit after the rules it overrides. Media queries in this file are
+       not sorted by breakpoint, and at equal specificity source order decides:
+       parked further up, this lost to the base .about-split and the phone kept
+       two columns. */
+    @media (max-width: 900px) {
+      .about-split {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      /* Full width now, so a 4:5 frame would be a metre tall; square keeps the
+         figure whole and the section readable. */
+      .about-portrait img {
+        aspect-ratio: 1 / 1;
+        object-position: center 16%;
+      }
+    }
+
+    .workshop-feature-kicker {
+      margin: 0 0 10px;
+      font-size: 0.75rem;
+      line-height: 1.3;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.72);
+    }
+
+    .workshop-core-statement {
+      margin: 0;
+      max-width: 18ch;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 3.1vw, 2.9rem);
+      line-height: 1.08;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    .workshop-core-statement em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .workshop-supporting-copy {
+      margin-top: 34px;
+    }
+
+    .about-play {
+      margin-top: 42px;
+    }
+
+    .about-play-statement {
+      margin: 0;
+      max-width: 900px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.5rem, 2.2vw, 2.25rem);
+      line-height: 1.25;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .about-play-copy {
+      margin: 18px 0 0;
+      max-width: 640px;
+      font-size: 1.05rem;
+      line-height: 1.75;
+      color: rgba(255,255,255,0.88);
+    }
+
+    .about-format {
+      margin: 40px 0 0;
+      padding-top: 26px;
+      max-width: 820px;
+      border-top: 1px solid rgba(255,255,255,0.12);
+      font-size: 1.02rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.88);
+    }
+
+    /* ===== ABOUT TWO-COLUMN EXPERIMENT -- BEGIN =====================
+       The whole explanation runs down the left column; the right one is a
+       single visual narrative -- you amplified, then connection, then Pedro
+       saying what connection is. Everything this experiment changes lives
+       between these two markers, plus the matching markers in the markup.
+       Delete both to go back to the earlier composition.
+
+       This block sits after every rule it overrides on purpose. Media queries
+       in this file are not sorted by breakpoint, and at equal specificity
+       source order decides -- parked further up, the phone layout below would
+       lose to the base .about-split. */
+
+    /* 61/39 rather than the old near-even split. The left column now carries
+       five blocks instead of three, so it needs the measure; the right one is
+       pictures, which read fine at 400-440px and would otherwise tower over
+       the text. Measured at 1150px: left 630px (~72 characters), right 403px,
+       and the two columns finish within about 40px of each other. */
+    .about-split {
+      grid-template-columns: minmax(0, 1.22fr) minmax(0, 0.78fr);
+      gap: clamp(34px, 3.6vw, 48px);
+    }
+
+    .about-split__visual {
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Same reason the lede and body already drop their ch caps here: the
+       column is the measure now, and a 640px or 900px cap inside a 630px
+       column only leaves the text ragged against the pictures. */
+    .about-split .about-play-statement,
+    .about-split .about-play-copy,
+    .about-split .about-format {
+      max-width: none;
+    }
+
+    /* Square, where the portrait above it is 4:5 -- two identical frames
+       stacked read as a pair of cards, and the point here is a sequence. The
+       source is a 3:4 vertical, so 1:1 crops the floor rather than the people;
+       20% spends that loss on the ceiling and keeps both faces in the upper
+       third, clear of the walking feet behind them -- checked at 10, 20, 28
+       and 36 before choosing. Same grade as the portrait and the interlude row so the three
+       pictures on this page read as one set. */
+    .about-connection {
+      margin: 44px 0 0;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.10);
+    }
+
+    .about-connection img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      object-position: center 20%;
+      filter: saturate(0.92) contrast(1.05) brightness(0.94);
+    }
+
+    /* The interlude quote's language, one size down: gold hairline, Cormorant
+       italic, the punch line in gold, small-caps attribution, no eyebrow and no
+       panel. It is under the photograph rather than over it -- Pedro speaking
+       after the picture, not a caption on it. */
+    .about-quote {
+      margin: 30px 0 0;
+      padding-left: 22px;
+      border-left: 1px solid var(--gold);
+    }
+
+    .about-quote blockquote {
+      margin: 0;
+    }
+
+    .about-quote p {
+      margin: 0;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(1.15rem, 1.55vw, 1.5rem);
+      line-height: 1.3;
+      color: var(--ink);
+    }
+
+    .about-quote p + p {
+      margin-top: 12px;
+    }
+
+    .about-quote em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .about-quote figcaption {
+      margin: 16px 0 0;
+      font-size: 0.72rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.72);
+    }
+
+    /* Narrow: not the desktop composition squeezed, but the reading order it
+       stands for. display: contents dissolves the two column wrappers so all
+       nine blocks become flex items of .about-split and order can interleave
+       them again -- list, portrait, supporting copy, state of play, the
+       connection photograph, the quote, then the format line. gap stays 0
+       because every block already carries its own top margin.
+
+       1024, not the 900 the old split used. Measured column bottoms: at 1440
+       the two columns end 38px apart and at 1200 they end 33px apart, but by
+       960 the text column has grown to 1440 and the picture column shrunk to
+       1114 -- a 326px hole under the quote. Two columns stop being worth it
+       somewhere just above 1000, so that is where they stop. */
+    @media (max-width: 1024px) {
+      .about-split {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+      }
+
+      /* The 900px block above already does this; repeated here because the
+         stacking now starts 124px earlier and a full-width 4:5 portrait in
+         that band would be most of a screen tall. */
+      .about-portrait img {
+        aspect-ratio: 1 / 1;
+        object-position: center 16%;
+      }
+
+      .about-split__copy,
+      .about-split__visual {
+        display: contents;
+      }
+
+      .about-lede { order: 1; }
+      .about-split .about-body:not(.workshop-supporting-copy) { order: 2; }
+      .workshop-list { order: 3; }
+      .about-portrait { order: 4; margin-top: 34px; }
+      .workshop-supporting-copy { order: 5; }
+      .about-play { order: 6; }
+      .about-connection { order: 7; margin-top: 40px; }
+      .about-quote { order: 8; margin-top: 26px; }
+      .about-format { order: 9; }
+
+      /* The measures the column was providing on desktop have to come back by
+         hand once these blocks are full width -- these are the caps they
+         carried before they moved inside .about-split, unchanged. */
+      .about-split .workshop-supporting-copy { max-width: 66ch; }
+      .about-split .about-play-statement { max-width: 900px; }
+      .about-split .about-play-copy { max-width: 640px; }
+      .about-split .about-format { max-width: 820px; }
+
+      /* Full width the quote had no measure of its own and ran past 100
+         characters a line at tablet size, which is where an editorial quote
+         stops reading as one. Capped, and a size up: the vw term collapses on
+         a narrow screen and it was rendering at its 1.15rem floor beside body
+         text set at 1.05. */
+      .about-quote {
+        max-width: 560px;
+      }
+
+      .about-quote p {
+        font-size: clamp(1.28rem, 2.6vw, 1.6rem);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .about-connection {
+        margin-top: 32px;
+      }
+
+      .about-quote {
+        margin-top: 24px;
+        padding-left: 18px;
+      }
+
+      .about-quote p {
+        font-size: clamp(1.2rem, 4.6vw, 1.45rem);
+      }
+    }
+    /* ===== ABOUT TWO-COLUMN EXPERIMENT -- END ======================= */
+
+    @media (max-width: 980px) {
+      /* Narrow: type over the picture goes muddy at this width, so the poster
+         splits the way a printed one does -- picture band edge to edge on top,
+         type underneath, nothing rounded and no gap between them. The picture
+         also stops running behind the navigation, which would otherwise sit
+         on the face. Header, then band, then type. */
+      .poster {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .poster > header {
+        order: 1;
+        border-bottom: 1px solid var(--line);
+        background: rgba(22, 17, 13, 0.08);
+      }
+
+      .hero {
+        display: block;
+        min-height: 0;
+        order: 3;
+      }
+
+      .hero-visual {
+        position: relative;
+        inset: auto;
+        order: 2;
+        width: 100%;
+        max-width: none;
+        aspect-ratio: 4 / 5;
+        height: auto;
+        /* No ellipse at this width: the band is nearly the full column, so a
+           plain soft bottom edge is tidier than a vignette. */
+        -webkit-mask-image: linear-gradient(180deg, #000 88%, transparent 100%);
+        mask-image: linear-gradient(180deg, #000 88%, transparent 100%);
+      }
+
+      /* The faded PNG is desktop-only: here the picture is a full-width band,
+         where a baked-in left fade would show as a transparent edge. Back to
+         the original JPEG, its own crop and its own scrim. Almost the whole
+         portrait fits a 4:5 frame at this width, so the band carries a face
+         and shoulders rather than a slice of a face. */
+      .hero-visual::before {
+        background-image: url('by__barabanova 408 111.jpg');
+        background-position: 50% 68%;
+      }
+
+      .hero-visual::after {
+        background: linear-gradient(180deg, rgba(19,13,10,0.10) 0%, rgba(19,13,10,0.16) 60%, rgba(19,13,10,0.58) 100%);
+      }
+
+      /* The simplified desktop wash is tuned to the poster layout and to the
+         PNG's own fade. Narrow widths keep the wash they had, so their
+         brightness is untouched by the desktop swap. */
+      .poster::after {
+        background:
+          radial-gradient(74% 118% at 80% 44%, rgba(19,13,10,0.34) 0%, rgba(19,13,10,0.16) 34%, rgba(19,13,10,0) 62%, rgba(19,13,10,0) 100%),
+          linear-gradient(102deg, rgba(19,13,10,0.56) 0%, rgba(19,13,10,0.44) 38%, rgba(19,13,10,0.28) 62%, rgba(19,13,10,0.14) 82%, rgba(19,13,10,0.06) 100%);
+      }
+
+      .hero-copy {
+        max-width: 100%;
+        padding: 30px 24px 0;
+      }
+
+      /* Side by side, the link would sit against the plates rather than at the
+         far end of a line, so the baseline stacks here. */
+      .hero-baseline {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 18px;
+        margin-top: 26px;
+        padding: 0 24px 34px;
+      }
+
+      .hero-scroll {
+        padding-bottom: 0;
+      }
+
+      .grid,
+      .expect-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .about-layout {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .about-photo img {
+        aspect-ratio: 3 / 2;
+      }
+
+      .bio-copy .bio-pull {
+        margin-top: 30px;
+        max-width: none;
+      }
+
+      .why-workshop-columns {
+        grid-template-columns: 1fr;
+        gap: 18px;
+      }
+
+      .why-workshop {
+        padding: 36px 18px 32px;
+      }
+
+      .bali-feature {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+
+    /* An iPad in portrait is 820px wide, where a 4:5 band comes out 975px tall
+       and pushes the title clean below the fold. Cap the band there and move
+       the focal point up so the whole head still fits the shorter frame; the
+       mask's bottom fade pulls back too, or it would eat the chin. Phones are
+       unaffected -- at 390px the 4:5 band is already shorter than the cap. */
+    @media (min-width: 641px) and (max-width: 980px) {
+      .hero-visual {
+        max-height: 56vh;
+        -webkit-mask-image: linear-gradient(180deg, #000 94%, transparent 100%);
+        mask-image: linear-gradient(180deg, #000 94%, transparent 100%);
+      }
+
+      .hero-visual::before {
+        background-position: 50% 37%;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .workshop-list {
+        grid-template-columns: 1fr;
+      }
+
+      .about-portrait figcaption {
+        padding: 52px 18px 18px;
+      }
+
+      .workshop-core-statement {
+        font-size: clamp(1.7rem, 7.4vw, 2.4rem);
+      }
+
+      .workshop-supporting-copy {
+        margin-top: 28px;
+      }
+
+      .story-card__frame {
+        width: 84px;
+        height: 84px;
+      }
+
+      .story-person {
+        flex-wrap: wrap;
+        white-space: normal;
+      }
+
+      .page {
+        width: min(100vw - 12px, 100%);
+        padding-top: 8px;
+      }
+
+      header,
+      .grid,
+      .expect-grid,
+      .section,
+      .practical-block,
+      .why-workshop {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+
+      /* The picture band runs to both edges here; the copy keeps the inset. */
+      .hero {
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .hero-copy {
+        padding: 26px 18px 0;
+      }
+
+      .hero-baseline {
+        padding: 0 18px 30px;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav {
+        flex-wrap: wrap;
+        gap: 10px 14px;
+      }
+
+      .hero-meta {
+        flex-direction: column;
+      }
+
+      .meta-item {
+        width: 100%;
+      }
+
+      .grid,
+      .expect-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .faq-answer {
+        padding-right: 0;
+      }
+
+      .about-photo img {
+        aspect-ratio: 4 / 3;
+        object-position: 62% top;
+      }
+
+      .why-workshop-columns {
+        margin-top: 22px;
+      }
+
+      .why-workshop-closing {
+        margin-top: 22px;
+      }
+
+      .section-inner {
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <main class="shell" aria-label="Being Before Doing workshop landing page">
+      <div class="inner">
+        <div class="poster">
+          <aside class="hero-visual" aria-label="Pedro portrait"></aside>
+
+          <header>
+            <div class="brand">CLOWN <span class="brand-dot"></span> Being Before Doing</div>
+            <nav class="nav" aria-label="Main navigation">
+              <a href="#about">About</a>
+              <a href="#experience">Experience</a>
+              <a href="#practical">Next date</a>
+              <a href="#practical" class="button">Reserve</a>
+            </nav>
+          </header>
+
+          <section class="hero">
+            <div class="hero-copy">
+              <p class="eyebrow">Two days with Pedro Fabião</p>
+              <h1>Being <span class="highlight">Before</span> Doing</h1>
+              <p class="subtitle">A workshop on presence, authenticity and human connection, through the art of clowning.</p>
+              <p class="subtitle-note">A version of personal work fuelled by pure fun and aliveness.</p>
+
+              <div class="cta-row">
+                <a href="#practical" class="button-primary">Reserve your spot</a>
+                <a href="#experience" class="button-secondary">See the experience</a>
+              </div>
+            </div>
+
+            <div class="hero-baseline">
+              <div class="hero-meta" aria-label="Workshop details">
+                <div class="meta-item">
+                  <span>Next date</span>
+                  <strong>15-16 October 2026</strong>
+                </div>
+                <div class="meta-item">
+                  <span>Location</span>
+                  <strong>Lisbon</strong>
+                </div>
+              </div>
+
+              <a class="hero-scroll" href="#why-this-workshop">
+                <span>Why this workshop</span>
+                <span class="hero-scroll__arrow" aria-hidden="true">&#8595;</span>
+              </a>
+            </div>
+          </section>
+        </div>
+
+        <section class="why-workshop" id="why-this-workshop">
+          <div class="why-workshop-content">
+            <p class="section-kicker">Why this workshop</p>
+            <h2>Getting it right is exhausting.</h2>
+
+            <div class="why-workshop-columns">
+              <p>Many of us get very good at thinking, planning and managing ourselves. We check how we're coming across. We swallow the impulse before it reaches the room. We keep the difficult feelings private. And it works: you stay in control, good, correct, easy to be around.</p>
+              <p>But what you have got good at is a role. And the further in you go, into work, family, whatever needs solving this week, the more of you it takes up. You forget you have a body. Weeks go by without much taste to them. You forget that stopping is allowed, that pleasure is available, that meeting another person is something you can have rather than something you get through.</p>
+            </div>
+
+            <p class="why-workshop-closing">Being Before Doing is two days of taking the roles off. All of them except your own.</p>
+          </div>
+        </section>
+
+        <section class="grid" aria-label="Key themes">
+          <article class="card">
+            <h3>Presence</h3>
+            <p>Notice what is actually happening before the mind turns it into a plan.</p>
+          </article>
+          <article class="card">
+            <h3>Play</h3>
+            <p>Try, fail, laugh and follow an impulse without needing to be good at it.</p>
+          </article>
+          <article class="card">
+            <h3>Connection</h3>
+            <p>Meet yourself, another person and the room without hiding behind a role.</p>
+          </article>
+        </section>
+
+        <section class="section" id="about">
+          <div class="section-inner about-inner">
+            <p class="section-kicker">About the workshop</p>
+            <h2>What Is Being Before Doing?</h2>
+
+            <!-- ABOUT TWO-COLUMN EXPERIMENT -- BEGIN. Reverting: move the four
+                 blocks in .about-split__copy after the list back out to be direct
+                 children of .about-inner, delete .about-split__visual (keeping the
+                 .about-portrait figure inside .about-split), and delete the CSS
+                 block marked with the same name. -->
+            <div class="about-split">
+              <div class="about-split__copy">
+                <p class="about-lede">This two-day workshop is Pedro's introduction to clowning.</p>
+
+                <p class="about-body">It isn't training to become a performer, though performers get a lot from it. The clown techniques are turned towards ordinary human things:</p>
+
+                <ul class="workshop-list">
+                  <li>being in real contact with someone</li>
+                  <li>knowing what you feel, and letting it show</li>
+                  <li>releasing tension</li>
+                  <li>making a mistake without falling apart</li>
+                  <li>letting yourself be seen, and finding it's not dangerous</li>
+                  <li>finding the joke in an awkward moment</li>
+                  <li>taking yourself a little less seriously</li>
+                </ul>
+
+                <p class="about-body workshop-supporting-copy">Everything we do is there to give more room to what makes you you. Your impulses, reactions, emotions, rhythms, hesitations, mistakes, and the particular way you meet the world.</p>
+
+                <div class="about-play">
+                  <p class="about-play-statement">The secret ingredient is the state of play.</p>
+                  <p class="about-play-copy">It lowers your defences and gets you moving before your mind has time to plan the result. It also brings pleasure, spontaneity, curiosity and openness.</p>
+                </div>
+
+                <p class="about-format">The workshop consists of a series of practices and games done as a whole group, in pairs, and sometimes individually. Deep connection and emotional release are the starting points. With the generous, mirroring presence of our partners and the audience, these experiences can lead us to discover something new about ourselves in a heightened state. Because the approach is rooted in the art of clowning, laughter will be omnipresent and sometimes punctuated by the occasional tears.</p>
+              </div>
+
+              <div class="about-split__visual">
+                <figure class="about-portrait">
+                  <img src="photo/IMG_4344-web.jpg" alt="A workshop participant reacting with open surprise during an exercise, both hands raised" width="1600" height="2133" loading="lazy" decoding="async">
+                  <figcaption>
+                    <p class="workshop-feature-kicker">The workshop is built on one idea:</p>
+                    <h3 class="workshop-core-statement">The clown in you is <em>you, amplified</em>.</h3>
+                  </figcaption>
+                </figure>
+
+                <figure class="about-connection">
+                  <img src="photo/IMG_9178-web.jpg" alt="Two participants sitting on the studio floor face to face, holding each other's gaze, one laughing with a hand at her mouth" width="1200" height="1600" loading="lazy" decoding="async">
+                </figure>
+
+                <figure class="about-quote">
+                  <blockquote>
+                    <p>What clowning really is about &#8212; is connection. With yourself, with others, and with a whole audience. <em>Because audiences don't lie.</em></p>
+                    <p>It's being in your maximum authenticity and still feeling totally connected to others.</p>
+                  </blockquote>
+                  <figcaption>Pedro Fabi&#227;o</figcaption>
+                </figure>
+              </div>
+            </div>
+            <!-- ABOUT TWO-COLUMN EXPERIMENT -- END -->
+          </div>
+        </section>
+
+        <section class="section section--bleed" id="experience">
+          <div class="gallery-head">
+            <p class="section-kicker">Workshop moments</p>
+            <h2>What it actually looks like</h2>
+            <p class="gallery-instruction">
+              <span class="gallery-instruction__pointer">Drag to explore &#183; Click to enlarge</span>
+              <span class="gallery-instruction__touch">Swipe to explore &#183; Tap to enlarge</span>
+            </p>
+          </div>
+
+          <div class="gallery">
+            <div class="gallery-track" role="group" aria-label="Photographs from the workshop, scrollable">
+              <button type="button" class="gallery-item" data-gallery-open="0" data-full="photo/gallery-web/full/gal-01.jpg">
+                <img src="photo/gallery-web/gal-01.jpg" alt="A participant striding across the studio mid-laugh while the group watches from the dark" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="1" data-full="photo/gallery-web/full/gal-02.jpg">
+                <img src="photo/gallery-web/gal-02.jpg" alt="Two participants doubled over laughing against a black curtain" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="2" data-full="photo/gallery-web/full/gal-03.jpg">
+                <img src="photo/gallery-web/gal-03.jpg" alt="The group lifting one participant off the floor between them" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="3" data-full="photo/gallery-web/full/gal-04.jpg">
+                <img src="photo/gallery-web/gal-04.jpg" alt="A participant laughing with his head thrown back, lit from the window" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="4" data-full="photo/gallery-web/full/gal-05.jpg">
+                <img src="photo/gallery-web/gal-05.jpg" alt="Two rows of participants standing face to face, waiting for the exercise to start" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="5" data-full="photo/gallery-web/full/gal-06.jpg">
+                <img src="photo/gallery-web/gal-06.jpg" alt="A participant clapping, smiling to herself" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="6" data-full="photo/gallery-web/full/gal-07.jpg">
+                <img src="photo/gallery-web/gal-07.jpg" alt="Two participants crossing the room, blurred by their own movement" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="7" data-full="photo/gallery-web/full/gal-08.jpg">
+                <img src="photo/gallery-web/gal-08.jpg" alt="Participants pressed close together with their arms raised" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="8" data-full="photo/gallery-web/full/gal-09.jpg">
+                <img src="photo/gallery-web/gal-09.jpg" alt="A participant watching in profile, chin resting on her hand" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="9" data-full="photo/gallery-web/full/gal-10.jpg">
+                <img src="photo/gallery-web/gal-10.jpg" alt="Two participants shouting together, hands raised" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="10" data-full="photo/gallery-web/full/gal-11.jpg">
+                <img src="photo/gallery-web/gal-11.jpg" alt="The whole group applauding in the studio, chairs pushed to the side" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="11" data-full="photo/gallery-web/full/gal-12.jpg">
+                <img src="photo/gallery-web/gal-12.jpg" alt="A participant leaning over two others and pulling a face, all three laughing" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="12" data-full="photo/gallery-web/full/gal-13.jpg">
+                <img src="photo/gallery-web/gal-13.jpg" alt="Two participants sitting close, one holding her face in her hands" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="13" data-full="photo/gallery-web/full/gal-14.jpg">
+                <img src="photo/gallery-web/gal-14.jpg" alt="A participant alone in front of the group with her arms wide open" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="14" data-full="photo/gallery-web/full/gal-15.jpg">
+                <img src="photo/gallery-web/gal-15.jpg" alt="Hands clapping in a circle, faces out of focus behind them" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="15" data-full="photo/gallery-web/full/gal-16.jpg">
+                <img src="photo/gallery-web/gal-16.jpg" alt="Four participants sitting along the wall between exercises" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="16" data-full="photo/gallery-web/full/gal-17.jpg">
+                <img src="photo/gallery-web/gal-17.jpg" alt="A participant laughing hard while the others talk beside her" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="17" data-full="photo/gallery-web/full/gal-18.jpg">
+                <img src="photo/gallery-web/gal-18.jpg" alt="A small group standing together, one participant crouched at their feet" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="18" data-full="photo/gallery-web/full/gal-19.jpg">
+                <img src="photo/gallery-web/gal-19.jpg" alt="Two participants watching from the dark edge of the room" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="19" data-full="photo/gallery-web/full/gal-20.jpg">
+                <img src="photo/gallery-web/gal-20.jpg" alt="Two participants facing each other, one mid-sound with her hands up" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="20" data-full="photo/gallery-web/full/gal-21.jpg">
+                <img src="photo/gallery-web/gal-21.jpg" alt="A participant crossing the room mid-movement, blurred, while the others watch" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="21" data-full="photo/gallery-web/full/gal-22.jpg">
+                <img src="photo/gallery-web/gal-22.jpg" alt="A participant standing alone in front of the group, hands behind her back" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="22" data-full="photo/gallery-web/full/gal-23.jpg">
+                <img src="photo/gallery-web/gal-23.jpg" alt="Participants holding one another after an exercise" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="23" data-full="photo/gallery-web/full/gal-24.jpg">
+                <img src="photo/gallery-web/gal-24.jpg" alt="A participant alone against a white wall, one arm reaching out" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="24" data-full="photo/gallery-web/full/gal-25.jpg">
+                <img src="photo/gallery-web/gal-25.jpg" alt="A participant laughing at someone just out of frame" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="25" data-full="photo/gallery-web/full/gal-26.jpg">
+                <img src="photo/gallery-web/gal-26.jpg" alt="Two lines of participants meeting in pairs across the room" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="26" data-full="photo/gallery-web/full/gal-27.jpg">
+                <img src="photo/gallery-web/gal-27.jpg" alt="Participants watching an exercise from the floor" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="27" data-full="photo/gallery-web/full/gal-28.jpg">
+                <img src="photo/gallery-web/gal-28.jpg" alt="Two participants holding each other and laughing" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="28" data-full="photo/gallery-web/full/gal-29.jpg">
+                <img src="photo/gallery-web/gal-29.jpg" alt="A participant reaching an arm high above the group, the others laughing" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="29" data-full="photo/gallery-web/full/gal-30.jpg">
+                <img src="photo/gallery-web/gal-30.jpg" alt="Two participants sitting side by side, one of them moved to tears" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="30" data-full="photo/gallery-web/full/gal-31.jpg">
+                <img src="photo/gallery-web/gal-31.jpg" alt="The group standing in a loose circle before an exercise" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="31" data-full="photo/gallery-web/full/gal-32.jpg">
+                <img src="photo/gallery-web/gal-32.jpg" alt="A participant listening quietly, half smiling" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="32" data-full="photo/gallery-web/full/gal-33.jpg">
+                <img src="photo/gallery-web/gal-33.jpg" alt="The group laughing together, one participant mid-clap" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+
+              <button type="button" class="gallery-item" data-gallery-open="33" data-full="photo/gallery-web/full/gal-34.jpg">
+                <img src="photo/gallery-web/gal-34.jpg" alt="The whole group lying on the floor across the room" width="800" height="800" loading="lazy" decoding="async">
+              </button>
+            </div>
+
+            <button type="button" class="gallery-arrow gallery-arrow--prev" data-gallery-scroll="-1" aria-label="Show earlier photographs">‹</button>
+            <button type="button" class="gallery-arrow gallery-arrow--next" data-gallery-scroll="1" aria-label="Show later photographs">›</button>
+          </div>
+        </section>
+
+        <dialog class="lightbox" id="gallery-lightbox" aria-label="Photograph viewer">
+          <figure class="lightbox__frame">
+            <img class="lightbox__img" src="" alt="">
+            <figcaption class="lightbox__caption"></figcaption>
+          </figure>
+
+          <button type="button" class="lightbox__close" data-lightbox-close aria-label="Close photograph">&#215;</button>
+          <button type="button" class="lightbox__step lightbox__step--prev" data-lightbox-step="-1" aria-label="Previous photograph">&#8249;</button>
+          <button type="button" class="lightbox__step lightbox__step--next" data-lightbox-step="1" aria-label="Next photograph">&#8250;</button>
+        </dialog>
+
+        <section class="section" id="is-this-for-you">
+          <div class="section-inner">
+            <h2>Is This for You?</h2>
+
+            <p class="audience-intro">People come to this workshop from very different backgrounds: founders, managers, programmers, marketers, salespeople, accountants, coaches, therapists, teachers, actors and other artists. Wanting to clown, on a stage or anywhere else, is as good a reason to be here as wanting something in your own life to shift. No previous experience is expected.</p>
+
+            <div class="audience-fit">
+              <div class="audience-fit__col">
+                <p class="audience-fit__label">Probably yes, if</p>
+                <ul class="audience-fit__list">
+                  <li>you hold back more than you would like to</li>
+                  <li>you find it easier to think about a feeling than to show it</li>
+                  <li>you want to take bigger risks in the way you work and create</li>
+                  <li>you want to clown, and you would rather start from yourself than from a technique</li>
+                  <li>you are tired of being the composed one</li>
+                </ul>
+              </div>
+
+              <div class="audience-fit__col">
+                <p class="audience-fit__label">Probably not now, if</p>
+                <ul class="audience-fit__list">
+                  <li>you would rather watch and decide later</li>
+                  <li>you are looking for therapy, or for someone to resolve something specific with you</li>
+                  <li>you want to leave with a finished number for the stage</li>
+                </ul>
+              </div>
+            </div>
+
+            <p class="audience-note">Being sent by your therapist counts as a reason too. It happens more often than you would think.</p>
+
+            <p class="audience-close">You choose how far you go, but the learning happens through taking part.</p>
+          </div>
+        </section>
+
+        <section class="section" id="failing" aria-label="On failing">
+          <div class="section-inner section-inner--bare">
+            <figure class="interlude">
+              <div class="interlude__row">
+                <img class="interlude__photo interlude__photo--1" src="photo/interlude-01-web.jpg" alt="Three participants pressed close together mid-laugh, one of them talking over the other two" width="1179" height="2088" loading="lazy" decoding="async">
+                <img class="interlude__photo interlude__photo--2" src="photo/interlude-02-web.jpg" alt="A participant doubled over laughing in the middle of the studio while the rest of the group applauds" width="960" height="1280" loading="lazy" decoding="async">
+                <img class="interlude__photo interlude__photo--3" src="photo/interlude-03-web.jpg" alt="Participants applauding, hands raised mid-clap, one of them receiving it with a moved, slightly overwhelmed smile" width="1179" height="655" loading="lazy" decoding="async">
+              </div>
+              <figcaption class="interlude__body">
+                <blockquote class="interlude__quote">
+                  <p>In the games we play there are norms &#8212; and there are breaks of the norms. And humour happens when you fail. So you are going to fail a lot. But you'll enjoy it. <em>And everybody is going to love you.</em></p>
+                </blockquote>
+                <p class="interlude__cite">Pedro Fabi&#227;o</p>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="section" id="expectations">
+          <div class="section-inner section-inner--bare">
+            <h2>What can be expected from applied clown work</h2>
+
+            <div class="expect-grid">
+              <div class="expect-card">
+                <h3>Deep contact with oneself and others</h3>
+                <ul>
+                  <li>Deepen your capacity for authentic contact and empathy</li>
+                  <li>Intense workout on your most spontaneous self</li>
+                  <li>Embrace the power of self acceptance and vulnerability for deeper, more meaningful connections</li>
+                  <li>Learn tools to release tension and dissolve resistance</li>
+                  <li>Clarify your personal strategies on how you present yourself to others</li>
+                </ul>
+              </div>
+
+              <div class="expect-card">
+                <h3>Fully embodied emotional work</h3>
+                <ul>
+                  <li>Explore the wisdom in your body, your impulsive, animal and irrational part</li>
+                  <li>Integrate both bright and previously difficult parts of your emotional experience</li>
+                  <li>Surf and manage bigger emotional waves, opening wider expressive channels to the four basic emotions</li>
+                  <li>Align your body-emotions-mind in the same experience and expression</li>
+                  <li>Access deeper and bigger pockets of energy and unknown resources in you</li>
+                </ul>
+              </div>
+
+              <div class="expect-card">
+                <h3>Play, creativity and pleasure</h3>
+                <ul>
+                  <li>Celebrate mistakes, being imperfect and taking risks, dissolving the fear of judgement</li>
+                  <li>Feel more comfortable in your own skin and less inclined to conform to others' expectations</li>
+                  <li>Allow yourself to feel all your own pleasure and utilise humour in relationships</li>
+                  <li>Discover a version of personal work that is fuelled by pure fun and aliveness</li>
+                  <li>Laugh unapologetically</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="reviews">
+          <div class="section-inner">
+            <p class="section-kicker">Personal stories</p>
+            <h2>What people leave with</h2>
+
+            <div class="stories">
+              <article class="story-card story-card--alex">
+                <div class="story-person">
+                  <div class="story-card__frame">
+                    <img class="story-card__portrait" src="photo/Portrait_Alexey5.jpg" alt="Alex, an actor and theatre performer who took part in the workshop" width="640" height="640" loading="lazy" decoding="async">
+                  </div>
+
+                  <div class="story-person__meta">
+                    <h3 class="story-name">Alex</h3>
+                    <p class="story-role">Actor &amp; Theatre Performer</p>
+                  </div>
+                </div>
+
+                <p class="story-theme">Mistakes</p>
+
+                <blockquote class="story-quote">
+                  <p>“At Pedro’s workshop I understood for the first time that getting it wrong is great. That this is exactly the moment you feel alive.”</p>
+                </blockquote>
+
+                <p class="story-preview">I’ve been doing theatre for almost twenty years, yet I spent much of that time afraid to try, fail or be fully seen. Pedro’s workshop changed the way I experience mistakes.</p>
+
+                <button type="button" class="story-open" aria-haspopup="dialog">
+                  Read full story <span aria-hidden="true">&#8594;</span>
+                </button>
+
+                <template class="story-full">
+                    <p>I’ve been doing theatre for almost twenty years. I act in films sometimes. And I’m afraid the whole time. Afraid to try, afraid to get it wrong. Very attentive, very careful, not very alive. On stage, on camera, and in life too.</p>
+                    <p>As if someone is about to judge me, tell me off. Like I’m stuck to some image of myself, and that image doesn’t want to live for real: to risk anything, to feel anything.</p>
+                    <p>Sometimes I manage to feel alive with friends, somewhere safe. More often: a wall.</p>
+                    <p>At Pedro’s workshop I understood for the first time that getting it wrong is great. That this is exactly the moment you feel alive. And that you can use that energy to live.</p>
+                    <p>Pedro’s workshop is fun. Very. At one point I was literally holding my stomach. Pedro is tactful. And very precise. He can needle you, but again, in a way that wakes life up.</p>
+                    <p>Pedro feels every person in the room. He reads you and turns your attention to wherever the tension is gathering. He’s light, and ironic in a kind way. The atmosphere at the workshop is good, and he’s the one who makes it.</p>
+                    <p>The exercises vary. You learn something about yourself constantly. You try things, you feel things. And all of it through play. Nothing forced.</p>
+                    <p>That June workshop became one of the strongest experiences I’ve had in the last few years. I want to keep going towards myself. Any way I can. Through clowning too.</p>
+                    <p>I’m really looking forward to the next meeting. With Pedro, with my clown, with the child in me, with my real self.</p>
+                </template>
+              </article>
+
+              <article class="story-card story-card--sasha">
+                <div class="story-person">
+                  <div class="story-card__frame">
+                    <img class="story-card__portrait" src="photo/Portrait_Sasha.jpg" alt="Sasha, an event producer who took part in the workshop" width="974" height="806" loading="lazy" decoding="async">
+                  </div>
+
+                  <div class="story-person__meta">
+                    <h3 class="story-name">Sasha</h3>
+                    <p class="story-role">Event Producer</p>
+                  </div>
+                </div>
+
+                <p class="story-theme">Play</p>
+
+                <blockquote class="story-quote">
+                  <p>“Now I’m sure there’s an inner clown living in each of us. A beautiful idiot.”</p>
+                </blockquote>
+
+                <p class="story-preview">I expected something trendy and lightweight. Instead, the workshop became one of the warmest, most unique and valuable experiences I’ve had in a long time.</p>
+
+                <button type="button" class="story-open" aria-haspopup="dialog">
+                  Read full story <span aria-hidden="true">&#8594;</span>
+                </button>
+
+                <template class="story-full">
+                    <p>For my thirtieth birthday my friends hired a sad clown to “help me mark a depressing anniversary.” And it was... incredible. Jokes along the lines of “Why are we all smiling? We’re not seventeen any more!”, a round dance, touching moments, childlike delight. That clown, by the way, was the legendary Vanya Pinzhenin.</p>
+                    <p>That was probably my first and last brush with clowning as an adult, until last weekend, when I sent myself off to a clown workshop.</p>
+                    <p>Being Before Doing is run by Pedro Fabião, a well-known local clown. So many people in my Lisbon circle had already done it, and I’d seen so many reviews, that I’d decided it was a bit of a mainstream thing by now. I was so wrong.</p>
+                    <p>Two days turned into a completely unique, warm and valuable experience that I’m still digesting. I’m sad it’s over, and I’m still getting my voice back: it disappeared the day after we finished, even though most of the exercises were mime (psychosomatics experts, over to you).</p>
+                    <p>Now I’m sure there’s an inner clown living in each of us. A beautiful idiot, which is what we called each other in the group, since the whole workshop was in English. Some people let that part show and enjoy having it around. Others hide it and feel embarrassed, which is a shame. Because that part is the most alive, the most spontaneous, the most unguarded, the most sensitive, the most expressive and the most playful.</p>
+                    <p>In that space of play and lightness and unbelievable amounts of laughter (I can’t remember the last time my face and my stomach hurt like that), something else opens up: the capacity for real, authentic (probably my word of the year, I’m exploring what it means in every way I can) and sometimes vulnerable contact with yourself and with the people around you.</p>
+                    <p>The price was €200 for two days. The value is many, many times that. I got an enormous reset, a wonderful group of people, and deep work with different states.</p>
+                    <p>The bonus track was realising that alongside Portuguese I need to bring English back into my life. Two years ago I could talk about anything, then I switched to learning a new language and dropped English, thinking I know it well enough anyway. Yeah, right. Without constant practice my C1 slid back to eternal pre-intermediate, and it drove me mad when I couldn’t find words, never mind making things up on the spot while standing on stage in front of an audience.</p>
+                    <p>The other challenge was working with emotions, which a clown has to be able to show. And as we know, in our culture showing weakness or fear or anything like that is taboo, so I learned that kind of openness from my non-Russian-speaking groupmates.</p>
+                    <p>So: delighted, want to do it again, fell in love with every person in our group and with the philosophy of clowning.</p>
+                </template>
+              </article>
+
+              <article class="story-card story-card--daria">
+                <div class="story-person">
+                  <div class="story-card__frame">
+                    <img class="story-card__portrait" src="photo/Dasha_portrait.jpg" alt="Daria, an artist who took part in the workshop" width="720" height="1280" loading="lazy" decoding="async">
+                  </div>
+
+                  <div class="story-person__meta">
+                    <h3 class="story-name">Daria</h3>
+                    <p class="story-role">Artist</p>
+                  </div>
+                </div>
+
+                <p class="story-theme">Letting go</p>
+
+                <blockquote class="story-quote">
+                  <p>“When you stop trying and just pour out what has built up, only something real can come out of you.”</p>
+                </blockquote>
+
+                <p class="story-preview">I arrived afraid of being asked to perform. By the end, I had sung a song that did not exist, lost control completely and discovered how much energy had been trapped underneath.</p>
+
+                <button type="button" class="story-open" aria-haspopup="dialog">
+                  Read full story <span aria-hidden="true">&#8594;</span>
+                </button>
+
+                <template class="story-full">
+                    <p class="story-standfirst"><strong>On clowning, control and a song made of nothing</strong></p>
+                    <p>I went to Pedro’s clowning workshop this weekend. Pedro is, as we say in Russian, widely known in narrow circles.</p>
+                    <p>I went with one firm condition: no “show us an act”, no “entertain the audience.” Otherwise I wouldn’t have walked into the room. My default mode in an unfamiliar group is quiet observer. I’m the one who slips neatly out of group lunches and unnecessary small talk so as not to spend the energy. I was afraid the nerves would hit and everyone would see my hands shaking.</p>
+                    <p>In the end what unravelled me wasn’t fear. It was tiredness.</p>
+                    <p>For two days we played furiously, did the tasks, laughed and cried to the point of hysterics, and there was a lot in all of it that was childlike, sincere and alive.</p>
+                    <p>My moment of truth came at the end of the second day. Being a strong empath, I had already digested the emotions of everyone who went on stage before me. I had nothing left for resisting or for holding a respectable face. And then came the task: go out and sing a song that doesn’t exist, making it up as you go. Any style, any nonsense, complete improvisation, until the facilitator says “stop.”</p>
+                    <p>Normally I’d have considered this hell. But I walked out resigned to my fate. Nothing left to lose, nothing left to defend myself with.</p>
+                    <p>And it turned out that when you stop trying and just pour out what has built up, only something real can come out of you, and in those conditions I’m a walking emotional volcano. Pedro said I was “a born star.” From the outside it was obviously peak cringe, but that was the exact moment a tonne of old clenching left me. A strange, clean emptiness came after it, as if someone had cleared out the pipes the energy runs through.</p>
+                    <p>A few thoughts since:</p>
+                    <p>A clown isn’t about “being funny.” It’s about openness and being able to catch the vibrations coming off the audience. Being yourself is very vulnerable and, as it turns out, wildly effective.</p>
+                    <p>On defences. My escape-and-avoid mechanism hasn’t gone anywhere, and I still think I need it. Empaths have a hard time without a fence. But the workshop showed me that I still spend energy on “seeming better” and on looking outside for confirmation that I’m bright, when there’s already plenty of it in there.</p>
+                    <p>What now. I want to learn to hold that “star” feeling without the doping of outside approval. To just know the volcano is in there, even when I’m sitting silently in a corner.</p>
+                    <p>Who I’d recommend it to: anyone with a sturdy psyche who needs a mental clear-out of everything unlived.</p>
+                    <p>Who shouldn’t go: anyone who is unstable right now or living through trauma. The workshop is too intense, it can overheat you.</p>
+                    <p>In short: an experience of liberation through completely losing control. It’s useful sometimes to let yourself be “cringe” and see that the world doesn’t fall apart. I’m now planning to send all my friends and acquaintances there, and in the summer I dream of talking Pedro into doing something like it for a group of children. One more fan for the regiment.</p>
+                </template>
+              </article>
+            </div>
+          </div>
+        </section>
+
+
+        <dialog class="story-modal" id="story-modal" aria-labelledby="story-modal-name">
+          <button type="button" class="story-modal__close" data-story-close aria-label="Close story">&#215;</button>
+          <article class="story-modal__inner">
+            <img class="story-modal__portrait" src="" alt="">
+            <p class="story-modal__theme"></p>
+            <h3 class="story-modal__name" id="story-modal-name"></h3>
+            <p class="story-modal__role"></p>
+            <blockquote class="story-modal__quote"><p></p></blockquote>
+            <div class="story-modal__text"></div>
+          </article>
+        </dialog>
+
+        <section class="section" id="video-reviews">
+          <div class="section-inner">
+            <p class="section-kicker">Participants on camera</p>
+            <h2>Hear it from them</h2>
+
+            <div class="vt-slider">
+              <div class="vt-track" role="group" tabindex="0" aria-label="Video testimonials">
+              <button type="button" class="vt-card" data-video="https://res.cloudinary.com/damdjell/video/upload/v1787449037/bbd-testimonial-stef-video-web.mp4" data-name="Stef" data-alt="Stef speaking to camera after the Being Before Doing workshop">
+                <span class="vt-poster">
+                  <img src="assets/testimonials/posters/bbd-testimonial-stef-poster-web.webp" alt="" width="600" height="1067" loading="lazy" decoding="async">
+                  <span class="vt-play" aria-hidden="true"></span>
+                  <span class="vt-duration">1:05</span>
+                </span>
+                <span class="vt-name">Stef</span>
+                <span class="vt-quote">Clowning doesn't only belong in theatre. It applies to real life.</span>
+              </button>
+
+              <button type="button" class="vt-card" data-video="https://res.cloudinary.com/damdjell/video/upload/v1787451723/bbd-testimonial-valery-video-web.mp4" data-name="Valery" data-alt="Valery speaking about authenticity, trust and being seen during the workshop">
+                <span class="vt-poster">
+                  <img src="assets/testimonials/posters/bbd-testimonial-valery-poster-web.webp" alt="" width="600" height="1067" loading="lazy" decoding="async">
+                  <span class="vt-play" aria-hidden="true"></span>
+                  <span class="vt-duration">0:56</span>
+                </span>
+                <span class="vt-name">Valery</span>
+                <span class="vt-quote">We met each other, we built trust, we had fun, we failed... it was tender, it was honest.</span>
+              </button>
+
+              <button type="button" class="vt-card" data-video="https://res.cloudinary.com/damdjell/video/upload/v1787451338/bbd-testimonial-ksenia-video-web.mp4" data-name="Ksenia" data-alt="Ksenia speaking about reconnecting with her body, gut and heart">
+                <span class="vt-poster">
+                  <img src="assets/testimonials/posters/bbd-testimonial-ksenia-poster-web.webp" alt="" width="600" height="1067" loading="lazy" decoding="async">
+                  <span class="vt-play" aria-hidden="true"></span>
+                  <span class="vt-duration">0:36</span>
+                </span>
+                <span class="vt-name">Ksenia</span>
+                <span class="vt-quote">I came here very much in my head. Now the balance feels much better.</span>
+              </button>
+
+              <button type="button" class="vt-card" data-video="https://res.cloudinary.com/damdjell/video/upload/v1787447479/bbd-testimonial-pedro-video-web.mp4" data-name="Pedro" data-alt="Pedro giving a humorous participant testimonial after the workshop">
+                <span class="vt-poster">
+                  <img src="assets/testimonials/posters/bbd-testimonial-pedro-poster-web.webp" alt="" width="600" height="1067" loading="lazy" decoding="async">
+                  <span class="vt-play" aria-hidden="true"></span>
+                  <span class="vt-duration">0:16</span>
+                </span>
+                <span class="vt-name">Pedro</span>
+                <span class="vt-quote">The people are nice, and the teacher is amazing.</span>
+              </button>
+
+              <button type="button" class="vt-card" data-video="https://res.cloudinary.com/damdjell/video/upload/v1787451147/bbd-testimonial-miriam-video-web.mp4" data-name="Miriam" data-alt="Miriam speaking about connection and being different from her usual self">
+                <span class="vt-poster">
+                  <img src="assets/testimonials/posters/bbd-testimonial-miriam-poster-web.webp" alt="" width="600" height="1067" loading="lazy" decoding="async">
+                  <span class="vt-play" aria-hidden="true"></span>
+                  <span class="vt-duration">0:20</span>
+                </span>
+                <span class="vt-name">Miriam</span>
+                <span class="vt-quote">To connect to people, to connect to myself, and to be different.</span>
+              </button>
+
+              <button type="button" class="vt-card" data-video="https://res.cloudinary.com/damdjell/video/upload/v1787451224/bbd-testimonial-anton-video-web.mp4" data-name="Anton" data-alt="Anton speaking about joy, challenge and exploring a new side of himself">
+                <span class="vt-poster">
+                  <img src="assets/testimonials/posters/bbd-testimonial-anton-poster-web.webp" alt="" width="600" height="1067" loading="lazy" decoding="async">
+                  <span class="vt-play" aria-hidden="true"></span>
+                  <span class="vt-duration">0:33</span>
+                </span>
+                <span class="vt-name">Anton</span>
+                <span class="vt-quote">I want to continue exploring this side of myself.</span>
+              </button>
+
+              <button type="button" class="vt-card" data-video="https://res.cloudinary.com/damdjell/video/upload/v1787447462/bbd-testimonial-victoria-video-web.mp4" data-name="Victoria" data-alt="Victoria giving a very short and expressive participant testimonial">
+                <span class="vt-poster">
+                  <img src="assets/testimonials/posters/bbd-testimonial-victoria-poster-web.webp" alt="" width="600" height="1067" loading="lazy" decoding="async">
+                  <span class="vt-play" aria-hidden="true"></span>
+                  <span class="vt-duration">0:08</span>
+                </span>
+                <span class="vt-name">Victoria</span>
+                <span class="vt-quote">Terrifying, amazing and evolving.</span>
+              </button>
+
+              <button type="button" class="vt-card" data-video="https://res.cloudinary.com/damdjell/video/upload/v1787448380/bbd-testimonial-ilya-video-web.mp4" data-name="Ilya" data-alt="Ilya speaking about making more room for emotions in daily life">
+                <span class="vt-poster">
+                  <img src="assets/testimonials/posters/bbd-testimonial-ilya-poster-web.webp" alt="" width="600" height="1067" loading="lazy" decoding="async">
+                  <span class="vt-play" aria-hidden="true"></span>
+                  <span class="vt-duration">0:33</span>
+                </span>
+                <span class="vt-name">Ilya</span>
+                <span class="vt-quote">There is more room for emotions in daily life than we think.</span>
+              </button>
+              </div>
+
+              <div class="vt-nav">
+                <button type="button" class="vt-arrow" data-vt-scroll="-1" aria-label="Previous participant stories">&#8249;</button>
+                <button type="button" class="vt-arrow" data-vt-scroll="1" aria-label="Next participant stories">&#8250;</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <dialog class="vt-modal" id="vt-modal" aria-label="Video testimonial">
+          <button type="button" class="vt-close" data-vt-close aria-label="Close video">&#215;</button>
+          <figure class="vt-modal-inner">
+            <video class="vt-video" controls playsinline preload="none"></video>
+            <figcaption class="vt-caption"></figcaption>
+          </figure>
+        </dialog>
+
+        <section class="section" id="bio">
+          <div class="section-inner">
+            <p class="section-kicker">Meet Pedro</p>
+            <h2>A clown and a psychologist</h2>
+
+            <div class="about-layout">
+              <div class="bio-copy">
+                <p><strong>Pedro Fabião</strong> has spent years training hospital clowns and actors around the world - hospital clowning being a profession that runs almost entirely on sensitivity and empathy. For years he directed <em>Operação Nariz Vermelho</em>, Portugal's hospital clown organisation.</p>
+                <p>He is also a psychologist, trained in psychodrama. The two halves aren't kept in separate rooms. The work is helping people find and express what's actually in them, and go gently through whatever is in the way.</p>
+                <p>His approach is playful, embodied and based on humour. Which doesn't keep difficult emotions away - and when they arrive, the work is finding what lets you say yes to the experience, so that something can move.</p>
+
+                <p class="bio-pull">Hospital clowning is a profession that runs almost entirely on <span>sensitivity and empathy</span>.</p>
+              </div>
+
+              <figure class="about-photo">
+                <img src="kseniia_fadeeva-1950_2.jpg" alt="Portrait of Pedro Fabião" />
+                <figcaption>Pedro Fabião, Lisbon</figcaption>
+              </figure>
+            </div>
+
+            <p class="bio-creds">Pedro teaches in more than 25 countries and has worked with Google, McKinsey, Columbia Business School EMBA, Skolkovo, NetJets, Red Nose International and The Humour Foundation, among others. He is one of the content creators of the program Evolution.NEW and a member of the Artistic Council of the Theodora Foundation.</p>
+          </div>
+        </section>
+
+        <section class="section" id="method">
+          <div class="section-inner">
+            <p class="section-kicker">Pedro's Approach</p>
+            <h2>Practical, embodied, playful, and honest</h2>
+
+            <div class="approach-grid">
+              <div class="approach-principle">
+                <div class="rule"></div>
+                <h3>Action-based learning</h3>
+                <p>Everything is practical and rooted in lived experience, not abstract theory. We work from what is happening in the room and let the real felt experience guide the process.</p>
+              </div>
+
+              <div class="approach-principle">
+                <div class="rule"></div>
+                <h3>Welcoming mistakes</h3>
+                <p>Transformation requires risk. We learn to meet mistakes, embarrassment, and uncertainty without collapsing into self-judgment, so freedom and creativity can expand.</p>
+              </div>
+
+              <div class="approach-principle">
+                <div class="rule"></div>
+                <h3>Authenticity and resources</h3>
+                <p>Practices are designed to help you act from a real impulse, respect your boundaries, and stay connected to your sensitivities, instincts, and inner resources even in bigger challenges.</p>
+              </div>
+
+              <div class="approach-principle">
+                <div class="rule"></div>
+                <h3>Challenge in the yellow zone</h3>
+                <p>We explore the stretch between comfort and overload: enough challenge to grow, but not so much tension that your system shuts down. This is where new choices can appear in real time.</p>
+              </div>
+
+              <div class="approach-principle">
+                <div class="rule"></div>
+                <h3>Playfulness and fun</h3>
+                <p>Play lowers our defences, increases trust, and lets us experiment without taking ourselves too seriously. It is one of the most powerful ways to create transformation.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--open" id="media">
+          <h2 class="visually-hidden">On film</h2>
+
+          <div class="bali-feature">
+            <div class="bali-video-wrap">
+              <video
+                class="bali-video"
+                controls
+                playsinline
+                preload="none"
+                poster="https://res.cloudinary.com/damdjell/video/upload/so_26,q_auto,w_1280/v1787534190/Pedro_BALI_1080p_h264.jpg"
+              >
+                <source src="https://res.cloudinary.com/damdjell/video/upload/v1787534190/Pedro_BALI_1080p_h264.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+              </video>
+
+              <button type="button" class="bali-play" aria-label="Play the Being Before Doing workshop video from Bali">
+                <span class="bali-play__icon" aria-hidden="true"></span>
+              </button>
+            </div>
+
+            <div class="bali-copy">
+              <blockquote class="bali-quote">
+                <p>Everything in life that is extremely fun is something where we are a little bit out of control.</p>
+              </blockquote>
+
+              <blockquote class="bali-quote bali-quote--soft">
+                <p>Only when the person says, “I want to play,” that’s when it starts.</p>
+              </blockquote>
+            </div>
+          </div>
+        </section>
+
+        <section class="practical-block" id="practical">
+          <div class="practical-card">
+            <p class="practical__eyebrow">Practical</p>
+
+            <p class="practical__date"><time datetime="2026-10-15">15-16 October 2026</time></p>
+
+            <div class="practical__facts">
+              <div class="practical__fact">
+                <p class="practical__lead">10:00-18:00, both days</p>
+                <p class="practical__support">Keep the evening free until 19:00 in case we run over.</p>
+              </div>
+
+              <div class="practical__fact">
+                <p class="practical__lead practical__where"><span>Lisbon</span><span>in English</span></p>
+                <p class="practical__support">Exact address shared with confirmed participants closer to the date.</p>
+              </div>
+            </div>
+
+            <div class="practical__prices">
+              <p class="price">
+                <span class="price__fig">€190</span>
+                <span class="price__when">until 15 September</span>
+              </p>
+              <p class="price price--later">
+                <span class="price__fig">€220</span>
+                <span class="price__when">from 16 September</span>
+              </p>
+            </div>
+
+            <p class="practical__fine">Maximum group size: 16 people.<br>Your place is confirmed once payment is received.</p>
+
+            <div class="practical-actions" data-cta-rival>
+              <a class="button-primary" href="https://wa.me/351937990470" data-wa="book">Book via WhatsApp</a>
+              <a class="button-secondary" href="mailto:playgroundlisbon@gmail.com" data-mail="book">Book via email</a>
+            </div>
+          </div>
+
+          <div class="faq">
+            <h3>Questions</h3>
+
+            <div class="faq-columns">
+              <div class="faq-col">
+                <details class="faq-item">
+                  <summary id="faq-q1" aria-expanded="false" aria-controls="faq-a1">Do I need experience in acting or clowning?</summary>
+                  <p class="faq-answer" id="faq-a1">No. Most people arrive with none.</p>
+                </details>
+                <details class="faq-item">
+                  <summary id="faq-q2" aria-expanded="false" aria-controls="faq-a2">Do I need to be funny?</summary>
+                  <p class="faq-answer" id="faq-a2">No. Humour is not something you have to produce here - it often appears when things do not go as planned.</p>
+                </details>
+                <details class="faq-item">
+                  <summary id="faq-q3" aria-expanded="false" aria-controls="faq-a3">How does the day run?</summary>
+                  <p class="faq-answer" id="faq-a3">We start at 10:00 and finish around 18:00 on both days, with an hour's break in the middle - there are cafés nearby, or bring something with you.<br>Keep the evening free until 19:00: depending on how the group is moving, we sometimes run over.</p>
+                </details>
+                <details class="faq-item">
+                  <summary id="faq-q4" aria-expanded="false" aria-controls="faq-a4">What should I bring?</summary>
+                  <p class="faq-answer" id="faq-a4">Comfortable clothes you can move in, indoor shoes or bare feet depending on the venue, water, and something for the breaks.</p>
+                </details>
+              </div>
+
+              <div class="faq-col">
+                <details class="faq-item">
+                  <summary id="faq-q5" aria-expanded="false" aria-controls="faq-a5">Do I have to attend both days?</summary>
+                  <p class="faq-answer" id="faq-a5">Yes. The workshop is one continuous two-day process. The second day builds on what happens during the first, and the consistency of the group helps create a safe working space.</p>
+                </details>
+                <details class="faq-item">
+                  <summary id="faq-q6" aria-expanded="false" aria-controls="faq-a6">Is there a minimum age?</summary>
+                  <p class="faq-answer" id="faq-a6">The workshop is generally for participants aged 21 and over. Pedro occasionally makes exceptions for people aged 18 to 20 - message us and ask.</p>
+                </details>
+                <details class="faq-item">
+                  <summary id="faq-q7" aria-expanded="false" aria-controls="faq-a7">Where exactly is the venue?</summary>
+                  <p class="faq-answer" id="faq-a7">In Lisbon. We confirm the exact address closer to the date and send it to everyone who has booked.</p>
+                </details>
+                <details class="faq-item">
+                  <summary id="faq-q8" aria-expanded="false" aria-controls="faq-a8">What if I need to cancel?</summary>
+                  <p class="faq-answer" id="faq-a8">Until 15 September: full refund, or transfer to a future workshop.<br>From 16 September: 50% refund if your place is filled. If it stays empty, the fee is non-refundable.</p>
+                </details>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="closing">
+          <p class="closing__line">See you in October! Come and fail a bit - you'll enjoy it.</p>
+          <p class="closing__ask">Still have questions? <a class="closing__link" href="https://wa.me/351937990470" data-wa="ask" data-cta-rival>Chat with us on WhatsApp</a>.</p>
+
+          <div class="contacts">
+            <span class="contacts__brand">© Lisbon Playground</span>
+
+            <span class="contacts__social">
+              <span class="contacts__label">Contacts</span>
+              <a class="contacts__icon" href="https://www.instagram.com/lisbon_playground/" target="_blank" rel="noopener noreferrer" aria-label="Instagram - Lisbon Playground"><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" focusable="false"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="12" r="4.1" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="17.3" cy="6.7" r="1.15" fill="currentColor"/></svg></a>
+              <a class="contacts__icon" href="https://www.facebook.com/playgroundlisbon" target="_blank" rel="noopener noreferrer" aria-label="Facebook - Lisbon Playground"><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" focusable="false"><path fill="currentColor" d="M13.5 21v-8h2.68l.4-3.11H13.5V7.92c0-.9.25-1.51 1.54-1.51h1.65V3.63c-.29-.04-1.27-.13-2.41-.13-2.38 0-4.02 1.46-4.02 4.13v2.26H7.58V13h2.68v8h3.24z"/></svg></a>
+              <a class="contacts__icon" href="https://t.me/pedrofabiaolisbon" target="_blank" rel="noopener noreferrer" aria-label="Telegram - Pedro Fabião Lisbon"><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true" focusable="false"><path fill="currentColor" d="M21.6 4.32 2.94 11.52c-.9.35-.89.87-.16 1.1l4.79 1.49 1.85 5.67c.22.6.4.84.75.84.34 0 .5-.16.7-.35l2.31-2.25 4.8 3.55c.88.49 1.51.24 1.73-.82l3.13-14.77c.32-1.29-.49-1.87-1.24-1.66zM8.52 14.3l10.4-6.56c.47-.28.9-.13.55.18l-8.9 8.03-.35 3.7-1.7-5.35z"/></svg></a>
+            </span>
+
+            <a class="contacts__link" href="mailto:playgroundlisbon@gmail.com">playgroundlisbon@gmail.com</a>
+
+            <span class="contacts__phone">WhatsApp +351 937 990 470</span>
+          </div>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <a class="button-primary sticky-cta" href="https://wa.me/351937990470" data-wa="book">Reserve your spot</a>
+
+  <script>
+    (function () {
+      // ---- Single source for every WhatsApp link on the page. ----
+      // The workshop dates appear inside the booking message: edit them here.
+      var WHATSAPP_NUMBER = '351937990470';
+      var EMAIL_ADDRESS = 'playgroundlisbon@gmail.com';
+      var WORKSHOP_DATES = '15-16 October 2026';
+
+      var WA_MESSAGES = {
+        book: 'Hi! I\'d like to book a place for Being Before Doing, ' + WORKSHOP_DATES + '.',
+        ask: 'Hi! I have a question about Being Before Doing.'
+      };
+
+      // encodeURIComponent leaves ! ' ( ) * ~ alone; WhatsApp needs them escaped
+      // or the prefill breaks in some clients.
+      var encode = function (text) {
+        return encodeURIComponent(text).replace(/[!'()*~]/g, function (c) {
+          return '%' + c.charCodeAt(0).toString(16).toUpperCase();
+        });
+      };
+
+      document.querySelectorAll('[data-wa]').forEach(function (el) {
+        var message = WA_MESSAGES[el.dataset.wa];
+        if (message) {
+          el.href = 'https://wa.me/' + WHATSAPP_NUMBER + '?text=' + encode(message);
+        }
+      });
+
+      // Same booking text, delivered by email instead.
+      document.querySelectorAll('[data-mail]').forEach(function (el) {
+        var message = WA_MESSAGES[el.dataset.mail];
+        if (message) {
+          el.href = 'mailto:' + EMAIL_ADDRESS
+            + '?subject=' + encode('Booking for Being Before Doing, ' + WORKSHOP_DATES)
+            + '&body=' + encode(message);
+        }
+      });
+
+      // ---- FAQ: mirror the native open state onto aria-expanded. ----
+      // <details> already gives keyboard support and button semantics; this only
+      // keeps the explicit ARIA state truthful for assistive tech that reads it.
+      document.querySelectorAll('.faq details').forEach(function (item) {
+        var trigger = item.querySelector('summary');
+        if (!trigger) { return; }
+        item.addEventListener('toggle', function () {
+          trigger.setAttribute('aria-expanded', item.open ? 'true' : 'false');
+        });
+      });
+
+      // ---- Bali video: custom play overlay over the Cloudinary poster. ----
+      // preload="none" means nothing is fetched until this runs.
+      var baliVideo = document.querySelector('.bali-video');
+      var baliPlay = document.querySelector('.bali-play');
+
+      if (baliVideo && baliPlay) {
+        baliPlay.addEventListener('click', function () {
+          baliVideo.play();
+        });
+
+        // fires for the overlay, the native control and the keyboard alike
+        baliVideo.addEventListener('play', function () {
+          baliPlay.hidden = true;
+        });
+      }
+
+      // ---- Written stories: one reusable modal for all three. ----
+      // The full text lives in a <template> inside each card, so it stays
+      // editable HTML but is never rendered or read until the modal opens.
+      var storyModal = document.getElementById('story-modal');
+
+      if (storyModal) {
+        var smPortrait = storyModal.querySelector('.story-modal__portrait');
+        var smTheme = storyModal.querySelector('.story-modal__theme');
+        var smName = storyModal.querySelector('.story-modal__name');
+        var smRole = storyModal.querySelector('.story-modal__role');
+        var smQuote = storyModal.querySelector('.story-modal__quote p');
+        var smText = storyModal.querySelector('.story-modal__text');
+        var smInner = storyModal.querySelector('.story-modal__inner');
+        var storyOpener = null;
+
+        document.querySelectorAll('.story-open').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var card = btn.closest('.story-card');
+            var img = card.querySelector('.story-card__portrait');
+            storyOpener = btn;
+
+            smPortrait.src = img.getAttribute('src');
+            smPortrait.alt = img.getAttribute('alt');
+            smPortrait.style.objectPosition = getComputedStyle(img).objectPosition;
+            smTheme.textContent = card.querySelector('.story-theme').textContent;
+            smName.textContent = card.querySelector('.story-name').textContent;
+            smRole.textContent = card.querySelector('.story-role').textContent;
+            smQuote.textContent = card.querySelector('.story-quote p').textContent;
+
+            smText.textContent = '';
+            smText.appendChild(card.querySelector('template.story-full').content.cloneNode(true));
+
+            storyModal.showModal();
+            smInner.scrollTop = 0;
+            document.body.style.overflow = 'hidden';   // lock the page behind
+          });
+        });
+
+        storyModal.addEventListener('click', function (event) {
+          if (event.target === storyModal) { storyModal.close(); }
+        });
+
+        storyModal.querySelectorAll('[data-story-close]').forEach(function (b) {
+          b.addEventListener('click', function () { storyModal.close(); });
+        });
+
+        // one handler for the close button, the backdrop and Escape alike
+        storyModal.addEventListener('close', function () {
+          document.body.style.overflow = '';
+          smText.textContent = '';
+          smPortrait.removeAttribute('src');
+          if (storyOpener) { storyOpener.focus(); storyOpener = null; }
+        });
+      }
+
+      // ---- Video testimonials: slider + one reusable modal. ----
+      // Posters are plain <img>-less backgrounds set from data-poster; the video
+      // src is only assigned on click, so no video is fetched until then.
+      var vtModal = document.getElementById('vt-modal');
+      var vtTrack = document.querySelector('.vt-track');
+
+      if (vtModal && vtTrack) {
+        var vtVideo = vtModal.querySelector('.vt-video');
+        var vtCaption = vtModal.querySelector('.vt-caption');
+        var vtOpener = null;
+
+        var closeModal = function () {
+          if (vtModal.open) { vtModal.close(); }
+        };
+
+        document.querySelectorAll('.vt-card').forEach(function (card) {
+          card.addEventListener('click', function () {
+            vtOpener = card;
+            vtVideo.src = card.dataset.video;          // loaded only now
+            vtVideo.setAttribute('aria-label', card.dataset.alt);
+            vtCaption.textContent = card.dataset.name;
+            vtModal.showModal();
+            vtVideo.play().catch(function () {});
+          });
+        });
+
+        // backdrop click: the dialog element itself is the backdrop area
+        vtModal.addEventListener('click', function (event) {
+          if (event.target === vtModal) { closeModal(); }
+        });
+
+        vtModal.querySelectorAll('[data-vt-close]').forEach(function (btn) {
+          btn.addEventListener('click', closeModal);
+        });
+
+        // fires for the close button, backdrop and Escape alike
+        vtModal.addEventListener('close', function () {
+          vtVideo.pause();
+          vtVideo.removeAttribute('src');
+          vtVideo.load();                              // drop the buffered data
+          if (vtOpener) { vtOpener.focus(); vtOpener = null; }
+        });
+
+        var arrows = document.querySelectorAll('[data-vt-scroll]');
+
+        // One card plus the real gap, read from the live layout so it stays
+        // correct at every breakpoint; two cards once four or more are visible.
+        var stepSize = function () {
+          var card = vtTrack.querySelector('.vt-card');
+          if (!card) { return 240; }
+          var gap = parseFloat(getComputedStyle(vtTrack).columnGap) || 0;
+          var one = card.getBoundingClientRect().width + gap;
+          var visible = vtTrack.clientWidth / one;
+          return visible >= 4 ? one * 2 : one;
+        };
+
+        var syncArrows = function () {
+          var max = vtTrack.scrollWidth - vtTrack.clientWidth - 1;
+          arrows.forEach(function (btn) {
+            var dir = Number(btn.dataset.vtScroll);
+            btn.disabled = dir < 0 ? vtTrack.scrollLeft <= 0 : vtTrack.scrollLeft >= max;
+          });
+        };
+
+        arrows.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            vtTrack.scrollBy({
+              left: stepSize() * Number(btn.dataset.vtScroll),
+              behavior: 'smooth'
+            });
+          });
+        });
+
+        // keeps the disabled state honest after wheel, drag or swipe too
+        vtTrack.addEventListener('scroll', syncArrows, { passive: true });
+        window.addEventListener('resize', syncArrows);
+        syncArrows();
+      }
+
+      // ---- Gallery: horizontal slider + lightbox. ----
+      // The track is a native overflow-x scroller, so swipe, trackpad and
+      // keyboard scrolling all work without any of this running. The script
+      // adds the desktop arrows and the full-size viewer on top of that.
+      var galTrack = document.querySelector('.gallery-track');
+      var lightbox = document.getElementById('gallery-lightbox');
+
+      if (galTrack) {
+        var galItems = Array.prototype.slice.call(galTrack.querySelectorAll('.gallery-item'));
+        var galArrows = document.querySelectorAll('[data-gallery-scroll]');
+
+        // Read the step off the live layout so it stays right at every
+        // breakpoint: a whole page of thumbnails, minus one for overlap.
+        var galStep = function () {
+          var first = galItems[0];
+          if (!first) { return 260; }
+          var gap = parseFloat(getComputedStyle(galTrack).columnGap) || 0;
+          var one = first.getBoundingClientRect().width + gap;
+          return Math.max(one, one * Math.max(1, Math.floor(galTrack.clientWidth / one) - 1));
+        };
+
+        var galSyncArrows = function () {
+          var max = galTrack.scrollWidth - galTrack.clientWidth - 1;
+          galArrows.forEach(function (btn) {
+            var dir = Number(btn.dataset.galleryScroll);
+            btn.disabled = dir < 0 ? galTrack.scrollLeft <= 0 : galTrack.scrollLeft >= max;
+          });
+        };
+
+        galArrows.forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            galTrack.scrollBy({ left: galStep() * Number(btn.dataset.galleryScroll), behavior: 'smooth' });
+          });
+        });
+
+        galTrack.addEventListener('scroll', galSyncArrows, { passive: true });
+        window.addEventListener('resize', galSyncArrows);
+        galSyncArrows();
+
+        // Mouse drag. Bound for pointerType 'mouse' only -- touch and pen keep
+        // the native swipe, which is better than anything reimplemented here.
+        // Past the threshold the pointer is captured and the next click is
+        // swallowed, so a drag never opens the lightbox by accident.
+        var DRAG_SLOP = 6;
+        var dragFrom = 0;
+        var dragScroll = 0;
+        var dragging = false;
+        var dragMoved = false;
+
+        galTrack.addEventListener('pointerdown', function (event) {
+          if (event.pointerType !== 'mouse' || event.button !== 0) { return; }
+          dragging = true;
+          dragMoved = false;
+          dragFrom = event.clientX;
+          dragScroll = galTrack.scrollLeft;
+        });
+
+        galTrack.addEventListener('pointermove', function (event) {
+          if (!dragging) { return; }
+          var moved = event.clientX - dragFrom;
+
+          if (!dragMoved) {
+            if (Math.abs(moved) < DRAG_SLOP) { return; }
+            dragMoved = true;
+            galTrack.classList.add('is-dragging');
+            galTrack.setPointerCapture(event.pointerId);
+          }
+
+          event.preventDefault();
+          galTrack.scrollLeft = dragScroll - moved;
+        });
+
+        var endDrag = function (event) {
+          if (!dragging) { return; }
+          dragging = false;
+          if (!dragMoved) { return; }
+          galTrack.classList.remove('is-dragging');
+          if (galTrack.hasPointerCapture(event.pointerId)) {
+            galTrack.releasePointerCapture(event.pointerId);
+          }
+        };
+
+        galTrack.addEventListener('pointerup', endDrag);
+        galTrack.addEventListener('pointercancel', endDrag);
+
+        // Capture phase, so this runs before the per-card click handler below.
+        // detail 0 means the "click" came from Enter or Space on a focused
+        // card, which a stale drag must never swallow.
+        galTrack.addEventListener('click', function (event) {
+          if (dragMoved && event.detail !== 0) {
+            event.preventDefault();
+            event.stopPropagation();
+            dragMoved = false;
+          }
+        }, true);
+
+        // Chrome would otherwise start a native image drag mid-swipe.
+        galTrack.addEventListener('dragstart', function (event) {
+          if (dragging) { event.preventDefault(); }
+        });
+
+        if (lightbox) {
+          var lbImg = lightbox.querySelector('.lightbox__img');
+          var lbCaption = lightbox.querySelector('.lightbox__caption');
+          var lbSteps = lightbox.querySelectorAll('[data-lightbox-step]');
+          var lbIndex = 0;
+          var lbOpener = null;
+
+          var lbShow = function (i) {
+            lbIndex = (i + galItems.length) % galItems.length;   // wraps both ways
+            var item = galItems[lbIndex];
+            var thumb = item.querySelector('img');
+
+            lbImg.src = item.dataset.full;
+            lbImg.alt = thumb.getAttribute('alt');
+            lbCaption.textContent = thumb.getAttribute('alt');
+
+            // Keep the strip behind the lightbox on the frame being viewed, so
+            // closing it does not drop the visitor somewhere else in the run.
+            // scrollLeft, not scrollIntoView -- the latter would also scroll the
+            // page behind the open dialog.
+            var delta = item.getBoundingClientRect().left - galTrack.getBoundingClientRect().left;
+            galTrack.scrollLeft += delta - (galTrack.clientWidth - item.offsetWidth) / 2;
+          };
+
+          var lbStep = function (dir) { lbShow(lbIndex + dir); };
+
+          galItems.forEach(function (item, i) {
+            item.addEventListener('click', function () {
+              lbOpener = item;
+              lbShow(i);
+              lightbox.showModal();
+              document.body.style.overflow = 'hidden';   // lock the page behind
+            });
+          });
+
+          lbSteps.forEach(function (btn) {
+            btn.addEventListener('click', function () { lbStep(Number(btn.dataset.lightboxStep)); });
+          });
+
+          lightbox.querySelectorAll('[data-lightbox-close]').forEach(function (btn) {
+            btn.addEventListener('click', function () { lightbox.close(); });
+          });
+
+          // The frame is pointer-events:none apart from the picture and the
+          // caption, so anything else inside the dialog counts as "outside".
+          lightbox.addEventListener('click', function (event) {
+            if (event.target === lightbox || event.target.classList.contains('lightbox__frame')) {
+              lightbox.close();
+            }
+          });
+
+          // Escape is handled by <dialog> itself; these are the arrows.
+          lightbox.addEventListener('keydown', function (event) {
+            if (event.key === 'ArrowLeft') { event.preventDefault(); lbStep(-1); }
+            if (event.key === 'ArrowRight') { event.preventDefault(); lbStep(1); }
+          });
+
+          lightbox.addEventListener('close', function () {
+            document.body.style.overflow = '';
+            lbImg.removeAttribute('src');                // drop the full-size file
+            if (lbOpener) { lbOpener.focus(); lbOpener = null; }
+          });
+        }
+      }
+
+      // ---- Sticky booking button. ----
+      // Visible once the hero has scrolled away, hidden whenever a real booking
+      // button is on screen. IntersectionObserver only, no scroll listeners.
+      var cta = document.querySelector('.sticky-cta');
+      var hero = document.querySelector('.hero');
+      var rivals = document.querySelectorAll('[data-cta-rival]');
+
+      if (cta && hero && 'IntersectionObserver' in window) {
+        var heroOut = false;
+        var visibleRivals = new Set();
+
+        var update = function () {
+          cta.classList.toggle('is-visible', heroOut && visibleRivals.size === 0);
+        };
+
+        new IntersectionObserver(function (entries) {
+          heroOut = !entries[0].isIntersecting;
+          update();
+        }, { rootMargin: '-25% 0px 0px 0px' }).observe(hero);
+
+        var rivalObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              visibleRivals.add(entry.target);
+            } else {
+              visibleRivals.delete(entry.target);
+            }
+          });
+          update();
+        }, { threshold: 0 });
+
+        rivals.forEach(function (el) { rivalObserver.observe(el); });
+      }
+    })();
+  </script>
+</body>
+</html>
+
+

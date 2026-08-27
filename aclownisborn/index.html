@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Clown Is Born — the long-term clown program with Pedro Fabião · Lisbon Playground</title>
+<meta name="description" content="A long-term journey into the world of clown with Pedro Fabião — five two-day modules in Baixa-Chiado, Lisbon, November 2026 – March 2027, in English, ending with a clown baptism in front of a real audience.">
+<link rel="canonical" href="https://lisbonplayground.com/aclownisborn/">
+<meta name="theme-color" content="#4A5468">
+
+<!-- ---------- favicons ---------- -->
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<!-- ---------- link preview (Open Graph) ---------- -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lisbonplayground.com/aclownisborn/">
+<meta property="og:site_name" content="Lisbon Playground">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="A Clown Is Born — the long-term clown program with Pedro Fabião">
+<meta property="og:description" content="A long-term journey into the world of clown through the smallest mask in the world. Five two-day modules in Lisbon, November 2026 – March 2027, ending with a clown baptism in front of a real audience.">
+<meta property="og:image" content="https://lisbonplayground.com/aclownisborn/og-image.jpg?v=2">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A Clown Is Born — 5-module program with Pedro Fabião. Lisbon, November 2026 – March 2027.">
+
+<!-- ---------- link preview (X / Twitter) ---------- -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A Clown Is Born — the long-term clown program with Pedro Fabião">
+<meta name="twitter:description" content="A long-term journey into the world of clown through the smallest mask in the world. Five two-day modules in Lisbon, November 2026 – March 2027.">
+<meta name="twitter:image" content="https://lisbonplayground.com/aclownisborn/og-image.jpg?v=2">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500&family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* Navy ramp lifted from Pedro's shirt in the hero cut-out (#081028), raised
+       in lightness so the page reads as deep blue rather than as another black
+       ground. The panels sit DARKER than the page: on a light ground the red
+       accents lose their punch, and inset cards give them a dark field again. */
+    --bg:#4A5468;
+    --bg-2:#414A5C;
+    --panel:#333B4D;
+    --panel-2:#3D4658;
+    --scrim:18,22,34;              /* rgb, for photo gradients */
+    --ink:#1B2130;                 /* dark ink for text on yellow */
+    --line:rgba(244,238,225,.16);
+    --cream:#F7F3EA;
+    --cream-dim:#DCD7CC;
+    --muted:#A3AAB8;
+    --yellow:#F5C13B;
+    --red:#FF3B2E;
+    --red-deep:#C0271A;          /* red that still reads on the yellow slab */
+    --maxw:1080px;
+    --r:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--cream);
+    font-family:'Archivo',system-ui,sans-serif;
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+  a{color:inherit}
+  ::selection{background:var(--yellow);color:var(--ink)}
+
+  .eyebrow{
+    font-weight:800;letter-spacing:.22em;text-transform:uppercase;
+    font-size:12.5px;color:var(--muted);
+  }
+  .pill{
+    display:inline-flex;align-items:center;gap:.5em;
+    font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12.5px;
+    padding:8px 15px;border-radius:999px;line-height:1;
+  }
+  .pill.solid{background:var(--yellow);color:var(--ink)}
+  .pill.ghost{border:1.5px solid rgba(244,238,225,.5);color:var(--cream)}
+
+  /* ---------- HERO ---------- */
+  header.hero{position:relative;padding-top:26px}
+  .toprow{
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+    margin-bottom:22px;flex-wrap:wrap;
+  }
+  .toprow .badges{display:flex;gap:10px;flex-wrap:wrap}
+  .brand{
+    font-weight:800;letter-spacing:.2em;text-transform:uppercase;font-size:12.5px;
+    color:var(--cream-dim);
+  }
+
+  .poster{
+    position:relative;border-radius:var(--r);overflow:hidden;
+    background:#2B3242;aspect-ratio:1080/640;
+    box-shadow:0 30px 80px -40px rgba(0,0,0,.9);
+    display:flex;align-items:flex-end;
+  }
+  .poster .bgphoto{
+    position:absolute;inset:0;width:100%;height:100%;
+    object-fit:cover;object-position:center 8%;
+    filter:grayscale(1) brightness(.62);
+  }
+  .poster::after{
+    content:"";position:absolute;inset:0;
+    background:
+      linear-gradient(100deg,rgba(var(--scrim),.94) 0%,rgba(var(--scrim),.74) 38%,rgba(var(--scrim),.10) 62%,rgba(var(--scrim),.45) 100%),
+      linear-gradient(to bottom,rgba(var(--scrim),0) 62%,rgba(var(--scrim),.9) 100%);
+  }
+  .poster .pedro{
+    position:absolute;right:-2%;bottom:0;height:96%;width:auto;
+    z-index:2;pointer-events:none;
+    filter:drop-shadow(0 24px 40px rgba(0,0,0,.55));
+    -webkit-mask-image:linear-gradient(to bottom,#000 76%,rgba(0,0,0,.55) 90%,transparent 100%);
+            mask-image:linear-gradient(to bottom,#000 76%,rgba(0,0,0,.55) 90%,transparent 100%);
+  }
+  .poster-copy{position:relative;z-index:3;padding:clamp(24px,4vw,46px);max-width:62%}
+
+  h1.title{
+    font-family:'Playfair Display',serif;font-weight:700;
+    color:var(--cream);
+    font-size:clamp(50px,8.6vw,104px);
+    line-height:.92;letter-spacing:-.015em;
+    text-shadow:0 22px 46px rgba(0,0,0,.65);
+  }
+  h1.title .l2{
+    display:block;padding-left:.3em;
+    font-style:italic;font-weight:600;color:var(--red);
+  }
+  .poster-meta{
+    margin-top:clamp(14px,2.4vw,26px);
+    font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+    font-size:clamp(12px,1.6vw,15px);color:var(--yellow);
+  }
+  .poster-sub{
+    margin-top:8px;font-family:'Playfair Display',serif;font-style:italic;
+    font-size:clamp(15px,2.1vw,22px);color:var(--cream);
+  }
+  .poster-place{
+    margin-top:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;
+    font-size:clamp(11px,1.4vw,13px);color:var(--cream-dim);
+  }
+
+  .promise{
+    padding:34px 0 4px;
+    font-family:'Playfair Display',serif;font-style:italic;font-weight:500;
+    font-size:clamp(20px,3.1vw,30px);line-height:1.35;color:var(--cream);
+  }
+  .promise b{font-weight:600;position:relative;white-space:nowrap}
+  .promise b::after{
+    content:"";position:absolute;left:0;right:0;bottom:-4px;height:2px;background:var(--red);
+  }
+
+  /* ---------- section frame ---------- */
+  section{padding:64px 0}
+  .sec-head{margin-bottom:34px}
+  .sec-head .eyebrow{display:block;margin-bottom:12px}
+  .sec-head h2{
+    font-weight:900;text-transform:uppercase;letter-spacing:-.01em;line-height:1;
+    font-size:clamp(30px,5.5vw,52px);
+  }
+  .sec-head h2 .y{color:var(--yellow)}
+  .lead{
+    font-size:clamp(18px,2.4vw,22px);line-height:1.6;color:var(--cream-dim);
+    max-width:62ch;
+  }
+  .lead b{color:var(--cream);font-weight:600}
+  .lead + .lead{margin-top:18px}
+  .divider{height:1px;background:var(--line);border:0;max-width:var(--maxw);margin:0 auto}
+
+  .intro-quote{
+    margin-top:26px;
+    font-family:'Playfair Display',serif;font-style:italic;font-weight:500;
+    font-size:clamp(22px,3.6vw,34px);line-height:1.35;color:var(--cream);
+    border-left:3px solid var(--yellow);padding-left:22px;max-width:26ch;
+  }
+
+  /* ---------- what you'll do ---------- */
+  .cards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  .card{
+    background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
+    padding:28px 30px;transition:transform .25s ease,border-color .25s ease,background .25s ease;
+  }
+  .card:hover{transform:translateY(-3px);border-color:rgba(245,193,59,.45);background:var(--panel-2)}
+  .card h3{
+    font-weight:900;text-transform:uppercase;letter-spacing:-.005em;line-height:1.05;
+    font-size:20px;margin-bottom:10px;
+  }
+  .card p{color:var(--cream-dim);font-size:16px;line-height:1.55}
+  .card .n{
+    display:block;font-weight:900;font-size:15px;color:var(--red);
+    letter-spacing:.1em;margin-bottom:12px;
+  }
+  /* The loudest block on the page. Every other panel is a grey card, so a solid
+     yellow slab reads as the destination at a glance rather than as one more
+     item in the list. The ring bleeding off the right edge is the red circle
+     from the Lisbon Playground logo. */
+  .card.finale{
+    grid-column:1/-1;position:relative;overflow:hidden;
+    background:var(--yellow);border-color:var(--yellow);
+    padding:34px 36px 38px;
+  }
+  .card.finale::after{
+    content:"";position:absolute;pointer-events:none;
+    right:-64px;top:50%;transform:translateY(-50%);
+    width:270px;height:270px;border-radius:50%;
+    border:26px solid rgba(255,59,46,.30);
+  }
+  .card.finale:hover{background:var(--yellow);border-color:var(--yellow)}
+  .card.finale > *{position:relative;z-index:1}
+  .card.finale .n{
+    display:inline-block;margin-bottom:16px;
+    background:var(--red-deep);color:var(--cream);
+    padding:7px 15px;border-radius:999px;
+    font-size:12px;letter-spacing:.14em;
+  }
+  .card.finale h3{color:var(--ink);font-size:clamp(26px,4vw,38px)}
+  .card.finale p{color:rgba(33,35,38,.84);font-size:17px;max-width:58ch}
+
+  /* ---------- two purposes ---------- */
+  .purpose-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .purpose{
+    background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
+    padding:32px 32px 34px;
+  }
+  .purpose .tag{
+    display:inline-flex;align-items:center;gap:8px;margin-bottom:16px;
+    font-weight:800;letter-spacing:.18em;text-transform:uppercase;font-size:11.5px;color:var(--red);
+  }
+  .purpose .tag::before{content:"";width:24px;height:2px;background:var(--red)}
+  .purpose h3{
+    font-family:'Playfair Display',serif;font-weight:600;
+    font-size:clamp(22px,3vw,28px);line-height:1.2;margin-bottom:14px;
+  }
+  .purpose h3 .y{color:var(--yellow)}
+  .purpose p{color:var(--cream-dim);font-size:16.5px}
+  .purpose p + p{margin-top:12px}
+
+  /* ---------- dates ---------- */
+  .dates{display:flex;flex-direction:column;gap:12px}
+  .drow{
+    display:grid;grid-template-columns:64px 1fr auto;gap:24px;align-items:center;
+    background:var(--panel);border:1px solid var(--line);border-radius:14px;
+    padding:20px 26px;
+  }
+  .drow .n{font-weight:900;font-size:30px;line-height:1;color:var(--red)}
+  .drow .d{font-weight:800;letter-spacing:.03em;font-size:clamp(17px,2.4vw,21px);text-transform:uppercase}
+  .drow .t{font-weight:700;letter-spacing:.08em;font-size:14px;color:var(--cream-dim);white-space:nowrap}
+  .drow.final{background:var(--yellow);border-color:var(--yellow)}
+  .drow.final .n{color:var(--red-deep)}
+  .drow.final .d{color:var(--ink)}
+  .drow.final .t{color:rgba(33,35,38,.72)}
+  .drow.final .sub{color:rgba(33,35,38,.62)}
+  .drow .sub{display:block;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+    font-size:11px;color:var(--muted);margin-top:5px}
+  .note{
+    margin-top:20px;display:flex;gap:14px;align-items:flex-start;
+    background:var(--panel-2);border:1px solid rgba(245,193,59,.4);border-left:3px solid var(--yellow);
+    border-radius:14px;padding:18px 22px;
+  }
+  .note .star{color:var(--yellow);font-size:20px;line-height:1.35;flex:none}
+  .note p{color:var(--cream-dim);font-size:16px;line-height:1.5;margin:0}
+  .note b{color:var(--cream)}
+
+  /* ---------- practical facts ---------- */
+  .facts{margin-top:20px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .fact{
+    background:var(--panel);border:1px solid var(--line);border-radius:14px;
+    padding:20px 22px;
+  }
+  .fact .k{
+    display:block;font-weight:800;letter-spacing:.18em;text-transform:uppercase;
+    font-size:11px;color:var(--muted);margin-bottom:9px;
+  }
+  .fact .v{font-weight:800;font-size:16.5px;line-height:1.3;color:var(--cream)}
+  .fact .v small{
+    display:block;font-weight:600;font-size:13.5px;color:var(--cream-dim);
+    margin-top:5px;letter-spacing:0;
+  }
+
+  /* ---------- prerequisites ---------- */
+  .prereq{
+    margin-top:40px;background:var(--panel);border:1px solid rgba(255,59,46,.38);
+    border-radius:20px;padding:clamp(26px,4vw,38px);
+  }
+  .prereq-flag{
+    display:inline-flex;align-items:center;gap:8px;margin-bottom:16px;
+    font-weight:800;letter-spacing:.18em;text-transform:uppercase;font-size:12px;color:var(--red);
+  }
+  .prereq-flag::before{content:"";width:26px;height:2px;background:var(--red)}
+  .prereq p{color:var(--cream-dim);max-width:64ch;font-size:17px}
+  .prereq p + p{margin-top:12px}
+  .prereq b{color:var(--cream)}
+  .prereq a{color:var(--yellow);text-decoration:none;border-bottom:1px solid rgba(245,193,59,.45)}
+  .prereq a:hover{border-bottom-color:var(--yellow)}
+
+  /* ---------- about pedro ---------- */
+  .bio-grid{display:grid;grid-template-columns:1.35fr .9fr;gap:36px;align-items:start}
+  .bio p{color:var(--cream-dim);max-width:60ch}
+  .bio p + p{margin-top:14px}
+  .bio b{color:var(--cream)}
+  .bio-pull{
+    margin-top:22px;font-family:'Playfair Display',serif;font-style:italic;
+    font-size:21px;line-height:1.4;color:var(--cream);
+    padding-left:18px;border-left:2px solid var(--red);
+  }
+  .bio-pull span{color:var(--yellow)}
+  .bio-photo{
+    border-radius:var(--r);overflow:hidden;
+    background:linear-gradient(180deg,#3A4356,#2C3442);
+    border:1px solid var(--line);
+  }
+  .bio-photo img{
+    display:block;width:100%;height:auto;aspect-ratio:4/5;
+    object-fit:cover;object-position:center 8%;
+    -webkit-mask-image:linear-gradient(to bottom,#000 70%,rgba(0,0,0,.5) 88%,transparent 100%);
+            mask-image:linear-gradient(to bottom,#000 70%,rgba(0,0,0,.5) 88%,transparent 100%);
+  }
+  .bio-photo figcaption{
+    padding:14px 18px;font-size:12.5px;color:var(--muted);
+    letter-spacing:.14em;text-transform:uppercase;font-weight:800;
+    border-top:1px solid var(--line);
+  }
+
+  /* ---------- investment ---------- */
+  .price-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  .price{
+    background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
+    padding:30px 30px 32px;
+  }
+  .price.feature{border-color:rgba(245,193,59,.4);background:var(--panel-2)}
+  .price .plan{font-weight:800;letter-spacing:.16em;text-transform:uppercase;font-size:12.5px;color:var(--muted)}
+  .price .amt{font-weight:900;font-size:52px;line-height:1;margin:12px 0 4px}
+  .price.feature .amt{color:var(--yellow)}
+  .price .amt small{font-size:18px;font-weight:700;color:var(--cream-dim)}
+  .price .sumline{color:var(--cream-dim);font-size:15.5px;margin-top:10px}
+  .price ul{list-style:none;margin-top:16px;display:flex;flex-direction:column;gap:9px}
+  .price li{position:relative;padding-left:20px;color:var(--cream-dim);font-size:15.5px}
+  .price li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:50%;background:var(--red)}
+  .price li b{color:var(--cream);font-weight:700}
+
+  /* ---------- register ---------- */
+  .register{
+    background:linear-gradient(180deg,#3A4356,#2D3546);
+    border:1px solid rgba(245,193,59,.35);border-radius:24px;
+    padding:46px clamp(24px,5vw,54px);text-align:center;
+  }
+  .register h2{
+    font-weight:900;text-transform:uppercase;letter-spacing:-.01em;line-height:1;
+    font-size:clamp(30px,5.5vw,50px);margin-bottom:10px;
+  }
+  .register h2 .y{color:var(--yellow)}
+  .register p{color:var(--cream-dim);max-width:52ch;margin:0 auto 26px}
+  .spots{
+    display:inline-flex;align-items:center;gap:10px;margin-bottom:18px;
+    background:rgba(255,59,46,.18);border:1px solid rgba(255,59,46,.55);
+    color:var(--cream);border-radius:999px;padding:9px 18px;
+    font-weight:800;letter-spacing:.1em;text-transform:uppercase;font-size:12px;
+  }
+  .spots .dot{width:8px;height:8px;border-radius:50%;background:var(--red);flex:none}
+  .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    font-weight:800;letter-spacing:.05em;text-transform:uppercase;font-size:14px;
+    padding:15px 26px;border-radius:999px;text-decoration:none;transition:transform .2s ease,opacity .2s ease;
+  }
+  .btn:hover{transform:translateY(-2px)}
+  .btn.primary{background:var(--yellow);color:var(--ink)}
+  .btn.ghost{border:1.5px solid rgba(244,238,225,.5);color:var(--cream)}
+  .contact-line{margin-top:24px;font-size:14px;color:var(--muted);letter-spacing:.02em}
+  .contact-line a{color:var(--cream);text-decoration:none;border-bottom:1px solid var(--red);padding-bottom:1px}
+
+  /* ---------- footer ---------- */
+  footer{border-top:1px solid var(--line);padding:34px 0 48px;margin-top:20px}
+  .foot{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .foot .brand{color:var(--muted)}
+  .foot .tag{font-size:13px;color:var(--muted)}
+
+  @media (max-width:860px){
+    .bio-grid{grid-template-columns:1fr;gap:26px}
+    .bio-photo{max-width:400px}
+  }
+  @media (max-width:720px){
+    body{font-size:16px}
+    .poster{aspect-ratio:auto;min-height:600px}
+    .poster .bgphoto{object-position:center 12%}
+    .poster::after{
+      background:linear-gradient(to bottom,
+        rgba(var(--scrim),.50) 0%,rgba(var(--scrim),.28) 26%,
+        rgba(var(--scrim),.86) 56%,rgba(var(--scrim),.96) 100%);
+    }
+    .poster .pedro{
+      height:46%;right:-4%;top:4%;bottom:auto;
+      -webkit-mask-image:linear-gradient(to bottom,#000 84%,transparent 100%);
+              mask-image:linear-gradient(to bottom,#000 84%,transparent 100%);
+    }
+    .poster-copy{max-width:100%;padding-bottom:28px}
+    .cards{grid-template-columns:1fr}
+    .purpose-grid{grid-template-columns:1fr}
+    .price-grid{grid-template-columns:1fr}
+    .drow{grid-template-columns:44px 1fr;gap:16px;padding:18px 20px}
+    .drow .n{font-size:24px}
+    .drow .t{grid-column:2;white-space:normal}
+    .card.finale{padding:28px 24px 30px}
+    .card.finale::after{right:-120px;width:210px;height:210px;border-width:20px}
+    .facts{grid-template-columns:1fr 1fr}
+    .toprow{margin-bottom:16px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= HERO ================= -->
+<header class="hero">
+  <div class="wrap">
+    <div class="toprow">
+      <div class="badges">
+        <span class="pill solid">Long-term program · 5 modules</span>
+        <span class="pill ghost">Lisbon</span>
+      </div>
+      <span class="brand">Lisbon Playground</span>
+    </div>
+
+    <div class="poster">
+      <img class="bgphoto" src="clowns-row.jpg" alt="A row of clowns with red noses sitting on chairs on a stage">
+      <picture>
+        <source srcset="pedro-cutout.webp" type="image/webp">
+        <img class="pedro" src="pedro-cutout.png" alt="Pedro Fabião wearing a turban and a red clown nose">
+      </picture>
+      <div class="poster-copy">
+        <h1 class="title">A Clown<span class="l2">is Born</span></h1>
+        <div class="poster-meta">November 2026 — March 2027</div>
+        <div class="poster-sub">a 5-module program with <b>Pedro Fabião</b></div>
+        <div class="poster-place">Baixa-Chiado, Lisbon · in English</div>
+      </div>
+    </div>
+
+    <p class="promise">Find your clown, learn how to play from the clown state, and have an <b>audience baptism</b> with the clown nose.</p>
+  </div>
+</header>
+
+<hr class="divider">
+
+<!-- ================= INTRO ================= -->
+<section id="about-program">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">The program</span>
+      <h2>Five months, five <span class="y">two-day modules</span></h2>
+    </div>
+    <p class="lead"><b>A Clown Is Born</b> is a long-term journey into the world of clown through the smallest mask in the world — the red nose, which reveals what is true in each moment. It is both an artistic training and a deeply human process, where you will explore play, emotions, movement, presence, and contact with others and an audience.</p>
+    <p class="lead">For those of you who were eager to continue the journey with Pedro — we are starting another round of the program in <b>November 2026</b>.</p>
+    <p class="lead">Once a month, from November to March, the group meets for a full weekend of clown work. It is a slow, cumulative journey: your clown has time to appear between the modules, to be forgotten and found again, and to grow into something that is genuinely yours. The program closes with a <b>clown baptism on stage</b>, in front of a real audience.</p>
+    <p class="intro-quote">Be transformed by the smallest mask in the world.</p>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ================= WHAT YOU'LL DO ================= -->
+<section id="what">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Summary of the long-term program</span>
+      <h2>What you'll <span class="y">work on</span></h2>
+    </div>
+
+    <div class="cards">
+      <article class="card">
+        <span class="n">01</span>
+        <h3>The smallest mask in the world</h3>
+        <p>Be transformed by the clown nose — the mask that reveals rather than hides, and helps you show what is real in each moment.</p>
+      </article>
+
+      <article class="card">
+        <span class="n">02</span>
+        <h3>The basic play structures</h3>
+        <p>Learn the fundamental clown games: mirroring, accepting, amplifying, resisting, insisting, learning and teaching.</p>
+      </article>
+
+      <article class="card">
+        <span class="n">03</span>
+        <h3>Expression with your whole body</h3>
+        <p>Strengthen your ability to express yourself emotionally and playfully — not only in words, but with everything you have.</p>
+      </article>
+
+      <article class="card">
+        <span class="n">04</span>
+        <h3>The four primary emotions</h3>
+        <p>Unlock emotional channels that may be less developed in you — anger, fear, joy and sadness — and learn to play in each of them.</p>
+      </article>
+
+      <article class="card">
+        <span class="n">05</span>
+        <h3>Friends with your mistakes</h3>
+        <p>Laugh at yourself and find lightness in extreme situations. Making friends with mistakes and fuckups is at the heart of the craft.</p>
+      </article>
+
+      <article class="card">
+        <span class="n">06</span>
+        <h3>Your clown persona</h3>
+        <p>Discover a clown drawn from your own personality traits — and explore totally new roles and forms of expressing yourself.</p>
+      </article>
+
+      <article class="card">
+        <span class="n">07</span>
+        <h3>The thinker and the animal</h3>
+        <p>Align the conscious and thoughtful you with the vital energy of the animal you also are.</p>
+      </article>
+
+      <article class="card">
+        <span class="n">08</span>
+        <h3>The world of your clown</h3>
+        <p>Explore the surrounding world your clown lives in — and learn how to let an audience inside it.</p>
+      </article>
+
+      <article class="card finale">
+        <span class="n">FINALE · 14 MARCH</span>
+        <h3>Clown baptism on stage</h3>
+        <p>The program ends with a presentation in front of a real audience — the moment your clown is met by people who have never seen it before. This is what the whole journey has been building towards.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ================= WHY PEOPLE COME ================= -->
+<section id="purposes">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Who it's for</span>
+      <h2>Two reasons people <span class="y">come here</span></h2>
+    </div>
+
+    <div class="purpose-grid">
+      <div class="purpose">
+        <span class="tag">Artistic</span>
+        <h3>To stand in front of an audience and <span class="y">know what you're doing</span></h3>
+        <p>You will learn precise and detailed techniques of standing in front of an audience and making them laugh and feel something extra-ordinary.</p>
+        <p>You will learn how to work with breath, movement and contact in a way that produces expected responses in an audience.</p>
+      </div>
+
+      <div class="purpose">
+        <span class="tag">Personal</span>
+        <h3>To deepen <span class="y">the pleasure of being alive</span></h3>
+        <p>You will deepen your capacity for authenticity, connection with others, vulnerability, joyful playfulness, sensitivity with your body wisdom and expression, self-confidence and spontaneous expression.</p>
+        <p>You will also weaken your self-censorship, your fear of deep contact, and the feeling of being stuck.</p>
+      </div>
+    </div>
+
+    <div class="prereq">
+      <span class="prereq-flag">Before you join</span>
+      <p>This is not your first step into clowning. To take part, you need <b>at least one clown workshop behind you</b> — ideally <a href="https://lisbonplayground.com/bbd/">Being Before Doing</a> with Pedro, but a workshop with another clown teacher counts just as well.</p>
+      <p>If you're not sure whether what you've done counts, just write to us — we'll figure it out together.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ================= DATES ================= -->
+<section id="dates">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">November 2026 — March 2027 · Baixa-Chiado, Lisbon</span>
+      <h2>Dates of the <span class="y">program</span></h2>
+    </div>
+
+    <div class="dates">
+      <div class="drow">
+        <span class="n">01</span>
+        <span class="d">12–13 November <span class="sub">Module one</span></span>
+        <span class="t">10:00–18:00</span>
+      </div>
+      <div class="drow">
+        <span class="n">02</span>
+        <span class="d">14–15 December <span class="sub">Module two</span></span>
+        <span class="t">10:00–18:00</span>
+      </div>
+      <div class="drow">
+        <span class="n">03</span>
+        <span class="d">14–15 January <span class="sub">Module three</span></span>
+        <span class="t">10:00–18:00</span>
+      </div>
+      <div class="drow">
+        <span class="n">04</span>
+        <span class="d">15–16 February <span class="sub">Module four</span></span>
+        <span class="t">10:00–18:00</span>
+      </div>
+      <div class="drow final">
+        <span class="n">05</span>
+        <span class="d">13–14 March <span class="sub">Module five · with presentation</span></span>
+        <span class="t">13th 10:00–18:00 · 14th 10:00–20:00</span>
+      </div>
+    </div>
+
+    <div class="note">
+      <span class="star">★</span>
+      <p><b>Always plan one extra hour.</b> The days tend to run over, especially on the second day of each module — so keep the evening free rather than booking something straight after.</p>
+    </div>
+
+    <div class="facts">
+      <div class="fact">
+        <span class="k">Where</span>
+        <span class="v">Baixa-Chiado<small>Lisbon, Portugal</small></span>
+      </div>
+      <div class="fact">
+        <span class="k">Language</span>
+        <span class="v">English<small>The whole program</small></span>
+      </div>
+      <div class="fact">
+        <span class="k">Group</span>
+        <span class="v">16 people max<small>Kept small on purpose</small></span>
+      </div>
+      <div class="fact">
+        <span class="k">Format</span>
+        <span class="v">5 two-day modules<small>One weekend a month</small></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ================= PEDRO ================= -->
+<section id="pedro">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Meet Pedro</span>
+      <h2>A clown and a <span class="y">psychologist</span></h2>
+    </div>
+
+    <div class="bio-grid">
+      <div class="bio">
+        <p><b>Pedro Fabião</b> has spent years training hospital clowns and actors around the world — hospital clowning being a profession that runs almost entirely on sensitivity and empathy. For years he directed <em>Operação Nariz Vermelho</em>, Portugal's hospital clown organisation.</p>
+        <p>He is also a psychologist, trained in psychodrama. The two halves aren't kept in separate rooms. The work is helping people find and express what's actually in them, and go gently through whatever is in the way.</p>
+        <p>His approach is playful, embodied and based on humour. Which doesn't keep difficult emotions away — and when they arrive, the work is finding what lets you say yes to the experience, so that something can move.</p>
+        <p class="bio-pull">Hospital clowning is a profession that runs almost entirely on <span>sensitivity and empathy</span>.</p>
+      </div>
+
+      <figure class="bio-photo">
+        <picture>
+          <source srcset="pedro-cutout.webp" type="image/webp">
+          <img src="pedro-cutout.png" alt="Pedro Fabião with a red clown nose">
+        </picture>
+        <figcaption>Pedro Fabião · Lisbon</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ================= INVESTMENT ================= -->
+<section id="investment">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Cost of the program</span>
+      <h2>Two ways to <span class="y">pay</span></h2>
+    </div>
+
+    <div class="price-grid">
+      <div class="price feature">
+        <div class="plan">Full program payment</div>
+        <div class="amt">€1,000</div>
+        <p class="sumline">The whole program, in three steps.</p>
+        <ul>
+          <li><b>€200 deposit</b> on registration — reserves your place</li>
+          <li>€300 by 1 October 2026</li>
+          <li>The remaining €500 at the first module (12–13 November)</li>
+        </ul>
+      </div>
+
+      <div class="price">
+        <div class="plan">Payment per module</div>
+        <div class="amt">€230 <small>/ module</small></div>
+        <p class="sumline">€1,150 in total across the five modules.</p>
+        <ul>
+          <li><b>€230 deposit</b> on registration — reserves your place and covers the first module</li>
+          <li>Each following module is paid at the previous one — you pay for December on 12 November, and so on</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="note">
+      <span class="star">★</span>
+      <p><b>If you cancel.</b> The deposit is refundable only if someone else takes your place in the group.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= REGISTER ================= -->
+<section id="register">
+  <div class="wrap">
+    <div class="register">
+      <span class="spots"><span class="dot"></span>The group is ~70% full</span>
+      <h2>Some spots are <span class="y">still available</span></h2>
+      <p>Places are reserved with a deposit. Write to us to book your spot, or to ask anything at all about the program.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="https://wa.me/351937990470">WhatsApp · +351 937 990 470</a>
+        <a class="btn ghost" href="mailto:playgroundlisbon@gmail.com">playgroundlisbon@gmail.com</a>
+      </div>
+      <div class="contact-line">Lisbon Playground · Lisbon, Portugal · <a href="mailto:playgroundlisbon@gmail.com">playgroundlisbon@gmail.com</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <span class="brand">Lisbon Playground</span>
+    <span class="tag">A Clown Is Born · Nov 2026 – Mar 2027</span>
+  </div>
+</footer>
+
+</body>
+</html>

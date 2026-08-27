@@ -1,0 +1,29 @@
+# ВАЖНО: этот репозиторий публичный, и GitHub Pages раздаёт из него ВСЁ.
+# Любой файл, попавший сюда, становится доступен по прямой ссылке на lisbonplayground.com.
+# Рабочие материалы (транскрипции, оригиналы фото, брифы, черновики) держим
+# в приватном репозитории lisbonplayground.
+
+docs/
+media/
+tools/
+*/docs/
+*/media/
+*/tools/
+photo/Gallery/
+*/photo/Gallery/
+
+# Тяжёлые исходники: видео раздаётся через Cloudinary, оригиналы фото — в приватном репо
+*.mp4
+*.mov
+*.heic
+*.HEIC
+*.srt
+*.zip
+*.psd
+
+# Черновики страниц
+index-mockup*.html
+index-quotes*.html
+index-a.html
+index-b.html
+prototype-*.html
