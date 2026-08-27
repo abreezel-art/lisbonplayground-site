@@ -10,7 +10,7 @@
 
   <!-- Social sharing. og-image.jpg is a purpose-built 1200x630 card, not a crop
        of the page: the title set in Cormorant Garamond on the left, the same
-       faded hero asset (pedro-hero-desktop-fade.png) on the right, on the page's
+       faded hero asset (pedro-hero-desktop-fade.webp) on the right, on the page's
        own ground and grade. Built so the preview stays legible at the small
        size WhatsApp and Telegram render it. The composition is centred inside
        the middle 630px square of the file on purpose: a small link preview is
@@ -240,12 +240,12 @@
        original, so the picture lands on the same pixels. Image and frame share
        the ratio, so cover has nothing to crop and the position is moot.
        Ungraded on export -- the filter below is still the page's own grade.
-       Narrow widths keep the original JPEG; see the 980px block. */
+       Narrow widths keep their own WebP; see the 980px block. */
     .hero-visual::before {
       content: "";
       position: absolute;
       inset: 0;
-      background: url('pedro-hero-desktop-fade.png') 50% 50% / cover no-repeat;
+      background: url('pedro-hero-desktop-fade.webp') 50% 50% / cover no-repeat;
       filter: saturate(0.9) contrast(1.06) brightness(0.92);
     }
 
@@ -2859,11 +2859,11 @@
 
       /* The faded PNG is desktop-only: here the picture is a full-width band,
          where a baked-in left fade would show as a transparent edge. Back to
-         the original JPEG, its own crop and its own scrim. Almost the whole
+         the portrait crop, its own scrim. Almost the whole
          portrait fits a 4:5 frame at this width, so the band carries a face
          and shoulders rather than a slice of a face. */
       .hero-visual::before {
-        background-image: url('by__barabanova 408 111.jpg');
+        background-image: url('by-barabanova-hero-mobile.webp');
         background-position: 50% 68%;
       }
 
@@ -3711,7 +3711,7 @@
               </div>
 
               <figure class="about-photo">
-                <img src="kseniia_fadeeva-1950_2.jpg" alt="Portrait of Pedro Fabião" />
+                <img src="kseniia_fadeeva-1950_2.webp" alt="Portrait of Pedro Fabião" />
                 <figcaption>Pedro Fabião, Lisbon</figcaption>
               </figure>
             </div>
