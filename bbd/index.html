@@ -350,6 +350,34 @@
       color: var(--ink);
     }
 
+    .meta-item--dates {
+      min-width: 300px;
+    }
+
+    .meta-item--dates strong {
+      display: block;
+      line-height: 1.3;
+    }
+
+    .meta-item--dates .meta-date {
+      display: block;
+      font-size: inherit;
+      letter-spacing: normal;
+      text-transform: none;
+      color: inherit;
+      margin: 0;
+    }
+
+    .meta-item--dates em {
+      display: inline;
+      margin-left: 6px;
+      font-size: 0.72rem;
+      font-style: normal;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--gold);
+    }
+
     .eyebrow {
       margin: 0 0 18px;
       font-size: 0.74rem;
@@ -916,6 +944,41 @@
       letter-spacing: -0.018em;
       font-variant-numeric: tabular-nums;
       color: var(--ink);
+    }
+
+    .practical__dates {
+      display: grid;
+      gap: 18px;
+    }
+
+    .practical__dates .practical__date {
+      margin-top: 14px;
+    }
+
+    .practical__status-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+      gap: 0 4px;
+      margin-top: 8px;
+      white-space: nowrap;
+    }
+
+    .practical__status,
+    .practical__current-price {
+      display: inline;
+      margin-top: 0;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.3;
+      letter-spacing: 0.04em;
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    .practical__current-price {
+      margin-left: 0;
     }
 
     .practical__facts {
@@ -3024,6 +3087,10 @@
         width: 100%;
       }
 
+      .meta-item--dates {
+        min-width: 0;
+      }
+
       .grid,
       .expect-grid {
         grid-template-columns: 1fr;
@@ -3085,9 +3152,12 @@
 
             <div class="hero-baseline">
               <div class="hero-meta" aria-label="Workshop details">
-                <div class="meta-item">
-                  <span>Next date</span>
-                  <strong>15-16 October 2026</strong>
+                <div class="meta-item meta-item--dates">
+                  <span>Workshop dates</span>
+                  <strong>
+                    <span class="meta-date">15-16 October 2026 <em>sold out, waitlist open</em></span>
+                    <span class="meta-date">18-19 January 2027 <em>registration open</em></span>
+                  </strong>
                 </div>
                 <div class="meta-item">
                   <span>Location</span>
@@ -3796,7 +3866,18 @@
           <div class="practical-card">
             <p class="practical__eyebrow">Practical</p>
 
-            <p class="practical__date"><time datetime="2026-10-15">15-16 October 2026</time></p>
+            <div class="practical__dates">
+              <div class="practical__date practical__date--sold-out">
+                <time datetime="2026-10-15">15-16 October 2026</time>
+                <div class="practical__status-row">
+                  <span class="practical__status">sold out, waitlist open.</span>
+                  <span class="practical__current-price">current price - €220</span>
+                </div>
+              </div>
+              <p class="practical__date">
+                <time datetime="2027-01-18">18-19 January 2027</time>
+              </p>
+            </div>
 
             <div class="practical__facts">
               <div class="practical__fact">
@@ -3813,11 +3894,11 @@
             <div class="practical__prices">
               <p class="price">
                 <span class="price__fig">€190</span>
-                <span class="price__when">until 15 September</span>
+                <span class="price__when">until 18 January</span>
               </p>
               <p class="price price--later">
                 <span class="price__fig">€220</span>
-                <span class="price__when">from 16 September</span>
+                <span class="price__when">from 19 January</span>
               </p>
             </div>
 
@@ -3905,7 +3986,7 @@
       // The workshop dates appear inside the booking message: edit them here.
       var WHATSAPP_NUMBER = '351937990470';
       var EMAIL_ADDRESS = 'playgroundlisbon@gmail.com';
-      var WORKSHOP_DATES = '15-16 October 2026';
+      var WORKSHOP_DATES = '18-19 January 2027';
 
       var WA_MESSAGES = {
         book: 'Hi! I\'d like to book a place for Being Before Doing, ' + WORKSHOP_DATES + '.',
